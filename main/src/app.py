@@ -1,10 +1,16 @@
 import json
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
 import plotly.express as px
+from filter_sentiment import clean_viz, filter_for_visualization
 
 # Load the geojson data
-with open('/content/drive/My Drive/CS2_Project/us_county/us-states.json', 'r') as f:
+with open('/sources/us-states.json', 'r') as f:
     geojson_data = json.load(f)
 
+# Load sentiment data file
+sentiment_df = filter_for_visualization("sources/US_twitter_analysis_state.csv")
 
 # Define a function that takes a year as input and returns a new Choropleth map with the sentiment scores for that year.
 def update_map(year):
@@ -46,8 +52,34 @@ fig.update_layout(
             'y': 1.1,
             'yanchor': 'top'
         }
-    ]
+    ],
+    title={
+        'text': 'Climate Change Sentiment Analysis',
+        'x': 0.5,
+        'y': 0.95,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
 )
 
-# Show the plot
-fig.show()
+# Define the dashboard layout using Dash HTML components
+app = dash.Dash(__name__)
+app.layout = html.Div(children=[
+    html.H1(children='Climate Change Sentiment Analysis'),
+
+    html.Div(children='''
+        A visualization of sentiment analysis data related to climate change in US states.
+    '''),
+
+    dcc.Graph(
+        id='climate-change-sentiment-map',
+        figure=fig
+    ),
+
+    html.Footer(children=[
+        html.P('Authors: Jonathan Juarez, Jaskirat Kaur, Ridhi Purohit, Grey Xu')
+    ])
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
