@@ -1,54 +1,49 @@
 #source https://towardsdatascience.com/very-simple-python-script-for-extracting-most-common-words-from-a-story-1e3570d0b9d0
+import numpy as np
+import re
 
-import collections
-import pandas as pd
-import matplotlib.pyplot as plt
-import unicodedata
-#%matplotlib inline
-
-# Read input file, note the encoding is specified here 
-# It may be different in your text file
-file = open('PrideandPrejudice.txt', encoding="utf8")
-a= file.read()
-
-# Stopwords
-
-# stopwords = set(line.strip() for line in open('stopwords.txt'))
-# stopwords = stopwords.union(set(['mr','mrs','one','two','said']))
-
-# When processing tweets, ignore these words
 stopwords = ["a", "an", "the", "this", "that", "of", "for", "or",
               "and", "on", "to", "be", "if", "we", "you", "in", "is",
               "at", "it", "rt", "mt", "with"]
 
-# Instantiate a dictionary, and for every word in the file, 
-# Add to the dictionary if it doesn't exist. If it does, increase the count.
-wordcount = {}
-# To eliminate duplicates, remember to split by punctuation, and use case demiliters.
-for word in a.lower().split():
-    word = word.replace(".","")
-    word = word.replace(",","")
-    word = word.replace(":","")
-    word = word.replace("\"","")
-    word = word.replace("!","")
-    word = word.replace("â€œ","")
-    word = word.replace("â€˜","")
-    word = word.replace("*","")
-    if word not in stopwords:
-        if word not in wordcount:
-            wordcount[word] = 1
-        else:
-            wordcount[word] += 1
-# Print most common word
-n_print = int(input("How many most common words to print: "))
-print("\nOK. The {} most common words are as follows\n".format(n_print))
-word_counter = collections.Counter(wordcount)
-for word, count in word_counter.most_common(n_print):
-    print(word, ": ", count)
-# Close the file
-file.close()
-# Create a data frame of the most common words 
-# Draw a bar chart
-lst = word_counter.most_common(n_print)
-df = pd.DataFrame(lst, columns = ['Word', 'Count'])
-df.plot.bar(x='Word',y='Count')
+def clean_tweet(tweet):
+    if type(tweet) == float:
+        return ""
+    temp = tweet.lower()
+    temp = re.sub("'", "", temp) # to avoid removing contractions in english
+    temp = re.sub("@[A-Za-z0-9_]+","", temp)
+    temp = re.sub("#[A-Za-z0-9_]+","", temp)
+    temp = re.sub(r'http\S+', '', temp)
+    temp = re.sub('[()!?]', ' ', temp)
+    temp = re.sub('\[.*?\]',' ', temp)
+    temp = re.sub("[^a-z0-9]"," ", temp)
+    temp = temp.split()
+    temp = [w for w in temp if not w in stopwords]
+    temp = " ".join(word for word in temp)
+    return temp
+
+tweets = ["Get ready for #NatGeoEarthDay! Join us on 4/21 for an evening of music and celebration, exploration and inspiration https://on.natgeo.com/3t0wzQy.",
+"Coral in the shallows of Aitutaki Lagoon, Cook Islands, Polynesia https://on.natgeo.com/3gkgq4Z",
+"Don't miss our @reddit AMA with author and climber Mark Synnott who will be answering your questions about his historic journey to the North Face of Everest TODAY at 12:00pm ET! Start submitting your questions here: https://on.natgeo.com/3ddSkHk @DuttonBooks"]
+
+cleaned_tweets = [clean_tweet(tw) for tw in tweets]
+print(results)
+
+#Finding most common words in a list of strings
+
+from collections import Counter
+
+#Join element strings of tweets list into one long string
+words = " ".join(cleaned_tweets)
+#print(words)
+
+# split the string into individual words
+words = words.split()
+
+# count the frequency of each word
+word_counts = Counter(words)
+
+# find the 5 most common words
+most_common_words = word_counts.most_common(5)
+
+print(most_common_words)
