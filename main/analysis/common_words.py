@@ -4,7 +4,7 @@ import re
 
 stopwords = ["a", "an", "the", "this", "that", "of", "for", "or",
               "and", "on", "to", "be", "if", "we", "you", "in", "is",
-              "at", "it", "rt", "mt", "with"]
+              "at", "it", "rt", "mt", "with", "n", "s", "i", "about", "are", "t"]
 
 def clean_tweet(tweet):
     if type(tweet) == float:
@@ -22,12 +22,16 @@ def clean_tweet(tweet):
     temp = " ".join(word for word in temp)
     return temp
 
-tweets = ["Get ready for #NatGeoEarthDay! Join us on 4/21 for an evening of music and celebration, exploration and inspiration https://on.natgeo.com/3t0wzQy.",
-"Coral in the shallows of Aitutaki Lagoon, Cook Islands, Polynesia https://on.natgeo.com/3gkgq4Z",
-"Don't miss our @reddit AMA with author and climber Mark Synnott who will be answering your questions about his historic journey to the North Face of Everest TODAY at 12:00pm ET! Start submitting your questions here: https://on.natgeo.com/3ddSkHk @DuttonBooks"]
+import pandas as pd
 
+df_tweets = pd.read_csv('../sources/tweets_text_content - tweets_text_content.csv')
+tweets_list = df_tweets.iloc[:, [1]].values
+
+#convert list of lists of tweets into one list
+tweets = list(np.concatenate(tweets_list))
+
+#clean tweets
 cleaned_tweets = [clean_tweet(tw) for tw in tweets]
-print(results)
 
 #Finding most common words in a list of strings
 
@@ -35,7 +39,8 @@ from collections import Counter
 
 #Join element strings of tweets list into one long string
 words = " ".join(cleaned_tweets)
-#print(words)
+
+print(type(words))
 
 # split the string into individual words
 words = words.split()
@@ -44,6 +49,6 @@ words = words.split()
 word_counts = Counter(words)
 
 # find the 5 most common words
-most_common_words = word_counts.most_common(5)
+most_common_words = word_counts.most_common(10)
 
 print(most_common_words)
