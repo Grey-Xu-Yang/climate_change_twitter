@@ -22,33 +22,36 @@ def clean_tweet(tweet):
     temp = " ".join(word for word in temp)
     return temp
 
-import pandas as pd
 
-df_tweets = pd.read_csv('../sources/tweets_text_content - tweets_text_content.csv')
-tweets_list = df_tweets.iloc[:, [1]].values
+#Code that can be used to count the most frequent common words (not necessary for our needs currently)
 
-#convert list of lists of tweets into one list
-tweets = list(np.concatenate(tweets_list))
+# import pandas as pd
 
-#clean tweets
-cleaned_tweets = [clean_tweet(tw) for tw in tweets]
+# df_tweets = pd.read_csv('../sources/tweets_text_content - tweets_text_content.csv')
+# tweets_list = df_tweets.iloc[:, [1]].values
 
-#Finding most common words in a list of strings
+# #convert list of lists of tweets into one list
+# tweets = list(np.concatenate(tweets_list))
 
-from collections import Counter
+# #clean tweets
+# cleaned_tweets = [clean_tweet(tw) for tw in tweets]
 
-#Join element strings of tweets list into one long string
-words = " ".join(cleaned_tweets)
+# #Finding most common words in a list of strings
 
-print(type(words))
+# from collections import Counter
 
-# split the string into individual words
-words = words.split()
+# #Join element strings of tweets list into one long string
+# words = " ".join(cleaned_tweets)
 
-# count the frequency of each word
-word_counts = Counter(words)
+# print(type(words))
 
-# find the 5 most common words
-most_common_words = word_counts.most_common(10)
+# # split the string into individual words
+# words = words.split()
 
-print(most_common_words)
+# # count the frequency of each word
+# word_counts = Counter(words)
+
+# # find the 5 most common words
+# most_common_words = word_counts.most_common(10)
+
+# print(most_common_words)
