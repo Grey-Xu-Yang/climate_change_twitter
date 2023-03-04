@@ -19,32 +19,21 @@ import pandas as pd
 import base64
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
+from data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
 believer_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/believer/believer_twitter.csv")
 denier_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/denier_twitter.csv")
 neutral_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/neutral_twitter.csv")
 
-df = pd.concat([believer_df, denier_df, neutral_df])
+final_df = pd.concat([believer_df, denier_df, neutral_df])
 
 with open("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/us-states.json", 'r') as f:
     geojson_file = json.load(f)
 
 # ******************************** Data cleaning ****************************** #
-fip_to_state = {
-    '01': 'Alabama','02': 'Alaska','04': 'Arizona','05': 'Arkansas','06': 'California',
-    '08': 'Colorado','09': 'Connecticut','10': 'Delaware','11': 'District of Columbia','12': 'Florida',
-    '13': 'Georgia','15': 'Hawaii','16': 'Idaho','17': 'Illinois','18': 'Indiana','19': 'Iowa','20': 'Kansas',
-    '21': 'Kentucky','22': 'Louisiana','23': 'Maine','24': 'Maryland','25': 'Massachusetts','26': 'Michigan',
-    '27': 'Minnesota','28': 'Mississippi','29': 'Missouri','30': 'Montana','31': 'Nebraska','32': 'Nevada',
-    '33': 'New Hampshire','34': 'New Jersey','35': 'New Mexico','36': 'New York','37': 'North Carolina',
-    '38': 'North Dakota','39': 'Ohio','40': 'Oklahoma','41': 'Oregon','42': 'Pennsylvania','44': 'Rhode Island',
-    '45': 'South Carolina','46': 'South Dakota','47': 'Tennessee','48': 'Texas','49': 'Utah','50': 'Vermont',
-    '51': 'Virginia','53': 'Washington','54': 'West Virginia','55': 'Wisconsin','56': 'Wyoming'
-}
-df = df.dropna()
-df['state_FIP'] = df['state_FIP'].astype(str).str.zfill(2)
-df['state_name'] = df['state_FIP'].map(fip_to_state)
+
+df = add_state_column(final_df)
 
 # ------------------------- App Layout ------------------------------- #
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
@@ -100,8 +89,7 @@ app.layout = dbc.Container([
         className="my-3",
     ),
             dbc.Col(
-                [
-                    html.Label(['Choose year:'],style={'font-weight': 'bold'}),
+                [html.Label(['Choose year:'],style={'font-weight': 'bold'}),
                     dcc.Slider(
                         id='year_slider',
                         min=2009,
