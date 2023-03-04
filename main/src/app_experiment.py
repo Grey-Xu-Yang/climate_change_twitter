@@ -1,22 +1,24 @@
 # Run this app with `python app.py` and
 # visit http://127.0.0.1:8050/ in your web browser.
 
+# Run this app with `python app.py` and
+# visit http://127.0.0.1:8050/ in your web browser.
+
 from dash import Dash, dcc, html
 import plotly.express as px
 import pandas as pd
 
-
 app = Dash(__name__)
 
-df = pd.read_csv('https://gist.githubusercontent.com/chriddyp/5d1ea79569ed194d432e56108a04d188/raw/a9f9e8076b837d541398e999dcbac2b2826a81f8/gdp-life-exp-2007.csv')
+df = pd.read_csv('/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/merged_date_state.csv')
+df['year'] = pd.to_datetime(int(df['date'])).dt.year
 
-fig = px.scatter(df, x="gdp per capita", y="life expectancy",
-                 size="population", color="continent", hover_name="country",
-                 log_x=True, size_max=60)
+fig = px.scatter(df, x='year', y='sentiment', color='incidentType', size='incidentType',
+                 hover_data=['incidentType'], title='Sentiment vs. Incident Type by Year')
 
 app.layout = html.Div([
     dcc.Graph(
-        id='life-exp-vs-gdp',
+        id='incident-type',
         figure=fig
     )
 ])
