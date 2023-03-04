@@ -11,7 +11,7 @@ import pandas as pd
 
 df = pd.read_csv("../sources/merged_date_county.csv")
 #df_tweet_date = pd.read_csv("../sources/merged_twitter_text_county.csv")
-print(len(df))
+#print(len(df))
 
 df_columns = ['disasterNumber', 'state', 'declarationType', 'declarationDate',
        'incidentBeginDate', 'incidentEndDate', 'fyDeclared', 'incidentType',
@@ -22,8 +22,8 @@ df_columns = ['disasterNumber', 'state', 'declarationType', 'declarationDate',
 app = Dash(__name__)
 
                  #size="temperature_avg"
-fig = px.scatter(df, x='declarationDate', y='incidentType'
-                 , color='incidentType', hover_name='state_name',
+fig = px.scatter(df, x='declarationDate', y='incidentType',
+                color='incidentType', hover_name='state_name',
                  log_x=True, size_max=60)
 
 app.layout = html.Div([

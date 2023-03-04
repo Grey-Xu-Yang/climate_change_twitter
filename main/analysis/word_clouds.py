@@ -7,25 +7,27 @@ from common_words import clean_tweet
 
 df_tweets = pd.read_csv('../sources/tweets_text_content - tweets_text_content.csv')
 tweets_list = df_tweets.iloc[:, [1]].values
-
+print(type(tweets_list))
 tweets = list(np.concatenate(tweets_list))
 
 #clean tweets
 cleaned_tweets = [clean_tweet(tw) for tw in tweets]
+print("the cleaned tweet list", len(cleaned_tweets))
 
 #Join element strings of tweets list into one long string
 text = " ".join(cleaned_tweets)
+print("joined text", len(text))
 
 stopwords = set(STOPWORDS)
 stopwords.update(["said", "u", "know", "make", "thing", "much", "want", "say", "will",
-              "re", "come", "going", "change doesn'", "doesn see", 'goparkansas goparkansas',
-              "see race", "via", "amp", "wait climate", 'almost'])  # add additional stop words as needed
+              "re", "come", "going", "doesn", 'goparkansas',
+              "see", "via", "amp", "wait", 'almost'])  # add additional stop words as needed
 #stopwords = set(stopwords)
 
 # Create and generate a word cloud image:
-wordcloud = WordCloud(width=800, height=400, max_words=35, background_color='white', stopwords=stopwords).generate(text)
+wordcloud = WordCloud(width=600, height=400, max_words=40, background_color='white', stopwords=stopwords, collocations = False).generate(text)
 
-print(wordcloud.words_.items())
+#print(wordcloud.words_.items())
 
 # # Display the generated image:
 plt.imshow(wordcloud, interpolation='bilinear')
@@ -33,7 +35,7 @@ plt.axis("off")
 plt.show()
 
 #this saves the wordcloud generated into an image file
-#plt.savefig('wordcloud.png')
+#plt.savefig('wordcloud_one.png')
 
 #possible code for implementing with plotly
 
