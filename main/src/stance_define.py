@@ -1,10 +1,10 @@
 import pandas as pd
 
-
 US_twitter = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/twitter_compressing_effort (1) (1).csv")
 US_twitter['stance'] = US_twitter['stance'].replace([3, 2, 1], ['believer', 'denier', 'neutral'])
+stance_df = US_twitter[(US_twitter['year'] != 2006) & (US_twitter['year'] != 2007) & (US_twitter['year'] != 2008)]
 file_path = '/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/twitter_compressing_effort.csv'
-US_twitter.to_csv(file_path, index=False)
+stance_df.to_csv(file_path, index=False)
 
     
 def stance_data(stance):
