@@ -19,6 +19,7 @@ import pandas as pd
 import base64
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
+
 from data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
@@ -36,7 +37,7 @@ with open("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/us-st
 df = add_state_column(final_df)
 
 # ------------------------- App Layout ------------------------------- #
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MINTY])
 
 L_FONT = "Work Sans, sans-serif"
 LT_SIZE = 16
@@ -46,20 +47,24 @@ app.layout = dbc.Container([
     dbc.Row(
         dbc.Col(
             [
-                html.H1("Sentiment of US states", className="text-center mb-4"),
+                html.H1("Sentiment of US states", style = {'textAlign': 'center'}),
                 html.P(
-                    "† This project aims to analyze the sentiment towards climate change across the United States." 
-                    "We collected data from social media platforms such as Twitter and analyzed the sentiment towards"
-                    "climate change based on the stance of the user (Believer, Denier or Neutral). The map below shows" 
-                    "the average sentiment towards climate change by state for the selected year and stance.",style={"font-size": 16, "text-align": 'left', 'marginTop': 15}
+                    "Welcome to our climate sentiment analysis dashboard! Our project is dedicated"
+                    " to analyzing the sentiment towards climate change across the United States."
+                    " We gathered and merged data from Twitter and FEMA to understand the sentiment"
+                    " towards climate change based on the stance of the user (Believer, Denier or Neutral." 
+                    " Explore our dashboard to gain insights into how people feel about this critical issue"
+                    " in different regions of the country.",
+                    style={"font-size": 16, "text-align": 'left', 'marginTop': 15}
                 ),
-            ],
+            ]
         )
     ),
     dbc.Row(
         [
             dbc.Col(
-                [html.Label(['Choose stance:'],style={'font-weight': 'bold'}),
+                [
+                    html.Label(['Choose stance:'],style={'font-weight': 'bold'}),
                     dcc.Dropdown(
                         id='stance_dropdown',
                         options=[
@@ -73,23 +78,25 @@ app.layout = dbc.Container([
                     html.Br(),
                     dcc.Graph(id='map-graph')
                 ],
-            width={"size": 8},
-            className="my-3",
-        ),
-        dbc.Col(
-        [html.P("Use the slider below to select a year and see the average sentiment towards"
-                "climate change by state for the chosen stance."
+                width={"size": 8},
+                className="my-3",
             ),
-            html.P(
-                "The map displays the average sentiment score for each state," 
-                "where higher scores indicate more positive sentiment towards climate change."
-            )
-        ],
-        width={"size": 4},
-        className="my-3",
-    ),
             dbc.Col(
-                [html.Label(['Choose year:'],style={'font-weight': 'bold'}),
+                [
+                    html.H2("Sentiment Map by Stance and Year", className="text-center mb-4"),        
+                    html.P(
+                        "The map displays the average sentiment score for each state. "            
+                        "Use the slider below to select a year and see the average sentiment towards "            
+                        "climate change by state for the chosen stance.",
+                        style={"font-size": 16, "text-align": 'left', 'marginTop': 15}
+                    )
+                ],
+                width={"size": 4},
+                className="my-3",
+            ),
+            dbc.Col(
+                [
+                    html.Label(['Choose year:'],style={'font-weight': 'bold'}),
                     dcc.Slider(
                         id='year_slider',
                         min=2009,
@@ -110,9 +117,13 @@ app.layout = dbc.Container([
                 html.H3("Word Clouds by Stance"),
 
                 dcc.Dropdown(
-                    options = ["Denier", "Believer", "Neutral"],
-                    value = "Words",
-                    id = "wordcloud-dropdown",
+                    options=[
+                        {'label': 'Denier', 'value': 'denier'},
+                        {'label': 'Believer', 'value': 'believer'},
+                        {'label': 'Neutral', 'value': 'neutral'}
+                    ],
+                    value='Words',
+                    id='wordcloud-dropdown',
                     style={'width': '100%'}
                 ),
                 html.P("""
@@ -131,8 +142,8 @@ app.layout = dbc.Container([
                 style={'width': '100%', 'display': 'inline-block'},
                 id = "wordcloud-2009",
                 title = "2009"
-                )], width=6),
-
+            )
+        ], width=6),
         dbc.Col([
             html.H3("2019", style={'textAlign': 'center'}),
             html.Img(
@@ -191,11 +202,11 @@ def display_wordclouds_2009(stance):
     
     """
     if stance == "believer":
-        image_path = "path_here"
+        image_path = "30122-project-hot-or-not/main/images/wordcloud_believer_2009.png"
     elif stance == "denier":
-        image_path = "path_here"
+        image_path = "30122-project-hot-or-not/main/images/wordcloud_denier_2009.png"
     else:
-        image_path = "path_here"
+        image_path = "30122-project-hot-or-not/main/images/wordcloud_neutral_2009.png"
        
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
@@ -207,15 +218,16 @@ def display_wordclouds_2009(stance):
 )
 def display_wordclouds_2019(stance):
     """
+    
     This function displayed the word cloud for the year 2019
     
     """
     if stance == "believer":
-        image_path = "path_here"
+        image_path = "30122-project-hot-or-not/main/images/wordcloud_believer_2019.png"
     elif stance == "denier":
-        image_path = "path_here"
+        image_path = "30122-project-hot-or-not/main/images/wordcloud_denier_2019.png"
     else:
-        image_path = "path_here"
+        image_path = "30122-project-hot-or-not/main/images/wordcloud_neutral_2019.png"
 
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
