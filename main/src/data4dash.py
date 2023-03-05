@@ -6,10 +6,7 @@ JASKIRAT KAUR
 
 File for subsisiary functions for dash
 
-Run the app with `python3 app.py` and visit
-http://127.0.0.1:8050/ in your web browser.
 '''
-
 
 import pandas as pd
 

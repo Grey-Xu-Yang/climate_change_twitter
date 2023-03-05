@@ -19,8 +19,7 @@ import pandas as pd
 import base64
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
-
-from data4dash import add_state_column
+from .data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
 believer_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/believer_twitter.csv")
