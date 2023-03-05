@@ -113,6 +113,10 @@ app.layout = dbc.Container([
         dbc.Col([
             html.Div([
                 html.H3("Word Clouds by Stance"),
+                html.P("""
+                The word cloud provides a visual representation of the most salient and frequently used terms related to climate change on Twitter over time. 
+                This can be a useful tool for understanding public discourse around climate change and identifying trends and shifts in language and rhetoric. 
+                """),
 
                 dcc.Dropdown(
                     options=[
@@ -124,11 +128,6 @@ app.layout = dbc.Container([
                     id='wordcloud-dropdown',
                     style={'width': '100%'}
                 ),
-                html.P("""
-                The word cloud provides a visual representation of the most salient and frequently used terms related to climate change on Twitter over time. 
-                This can be a useful tool for understanding public discourse around climate change and identifying trends and shifts in language and rhetoric. 
-                """)
-
             ]),
 
         ], width=12),
@@ -156,7 +155,7 @@ app.layout = dbc.Container([
             [
                 html.P(
                     "This project was developed by Jonathan Juarez, Jaskirat Kaur, Ridhi Purohit, and Grey Xu"
-                    "as part of the Spring 2023 course 'CAPP 30122: Computer Science and Applications II' at the University of Chicago",
+                    " as part of the Spring 2023 course 'CAPP 30122: Computer Science and Applications II' at the University of Chicago",
                     className="text-muted",
                 ),
             ],
