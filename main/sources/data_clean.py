@@ -1,7 +1,9 @@
 """
-Data Cleaning File
+Data Cleaning and API File
 
-Grey Xu
+Grey: Part 1, 3 and 5
+Jonathan: Part 2
+Jaskirat: Part 4
 
 """
 import json
