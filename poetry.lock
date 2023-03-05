@@ -836,6 +836,17 @@ qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "attrs", "colorama", "docopt", "pytest (<7.0.0)"]
 
 [[package]]
+name = "jellyfish"
+version = "0.6.1"
+description = "a library for doing approximate and phonetic matching of strings."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "jellyfish-0.6.1.tar.gz", hash = "sha256:5104e45a2b804b48a46a92a5e6d6e86830fe60ae83b1da32c867402c8f4c2094"},
+]
+
+[[package]]
 name = "jinja2"
 version = "3.1.2"
 description = "A very fast and expressive template engine."
@@ -2483,6 +2494,20 @@ files = [
 dev = ["flake8 (<4.0.0)", "flake8-annotations", "flake8-bugbear", "flake8-commas", "flake8-comprehensions", "flake8-continuation", "flake8-datetimez", "flake8-docstrings", "flake8-import-order", "flake8-literal", "flake8-noqa", "flake8-requirements", "flake8-type-annotations", "flake8-use-fstring", "mypy", "pep8-naming"]
 
 [[package]]
+name = "us"
+version = "2.0.2"
+description = "US state meta information and other fun stuff"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "us-2.0.2.tar.gz", hash = "sha256:cb11ad0d43deff3a1c3690c74f0c731cff5b862c73339df2edd91133e1496fbc"},
+]
+
+[package.dependencies]
+jellyfish = "0.6.1"
+
+[[package]]
 name = "wcwidth"
 version = "0.2.6"
 description = "Measures the displayed width of unicode strings in a terminal"
@@ -2648,8 +2673,12 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 lock-version = "2.0"
 python-versions = "^3.8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 content-hash = "bf465857df8e941eae0f9e24c6872594679a8aa5ccc8b4bb91ae35a5e7e30eb0"
 >>>>>>> bc06aaed5c454907329d41773140189e868d50c8
 =======
 content-hash = "cd6a44b8621830d53c6d9025e2877cdd78032be4cbc0c7f7b9cfc4adf4784dcc"
 >>>>>>> eadd455cb43a1508bc22fb33af788590a61d3f0f
+=======
+content-hash = "9e2ae022334fc79496a4f9f9e42caaadb2181115c82f389ec23e228d138fe974"
+>>>>>>> 35fc28bba6dcb8ee1fbf9d6137a7b0d3ed8aa122
