@@ -16,6 +16,7 @@ wordcloud = "^1.8.2.2"
 us = "^2.0.2"
 geopandas = "^0.12.2"
 shapely = "^2.0.1"
+seaborn = "^0.12.2"
 
 
 [build-system]
