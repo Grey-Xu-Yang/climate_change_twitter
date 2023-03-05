@@ -13,6 +13,7 @@ dash-bootstrap-components = "^1.4.0"
 pyarrow = "^11.0.0"
 jupyter = "^1.0.0"
 wordcloud = "^1.8.2.2"
+us = "^2.0.2"
 
 
 [build-system]
