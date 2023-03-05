@@ -8,18 +8,16 @@ Even though the more extreme weather events have been happening more frequently 
 
 ## Built with
 - Python
-Plotly
-Dash/Cytoscape
-Networkx
-Pyvis.network
-HTML/CSS
-Data sources
-WTO Merchandise trade values annual dataset : overall trade volume in product details (SITC)
-IMF Direction of Trade Statistics (DOTS) : trade flows for worldwide countries
-UN Comtrade : trade flows between top30 countries in product details (HS code)
-Our World in Data Covid-19 data : covid death/cases and stringent index
-World Bank World Development Indicators : gdp, inflation, exchange rate
-Country code : map alpha 2/3 codes to country name
+- Plotly/Seaborn
+- Dash
+- Scikitlearn
+- Statsmodels
+
+## Data sources
+1. Climate Change Twitter Dataset: https://doi.org/10.1016/j.eswa.2022.117541 
+2. Federal Emergency Management Agency Disaster Events Data: https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2
+3. Twitter Developer Platform (API): https://developer.twitter.com/en/portal/dashboard
+
 ## Getting Started
 To get started with the App, follow these steps:
 
