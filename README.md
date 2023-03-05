@@ -30,6 +30,7 @@ This multi-faceted analysis will help us gain a comprehensive understanding of p
 <p align="center">
 <img src="/main/images/wordcloud_Fire_2019.png">
 </p>
+
 ### Interactive Sentiment Map
 <p align="center">
 <img src= "./main/images/map_demo.png">
