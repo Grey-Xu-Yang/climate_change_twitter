@@ -14,6 +14,8 @@ pyarrow = "^11.0.0"
 jupyter = "^1.0.0"
 wordcloud = "^1.8.2.2"
 us = "^2.0.2"
+geopandas = "^0.12.2"
+shapely = "^2.0.1"
 
 
 [build-system]
