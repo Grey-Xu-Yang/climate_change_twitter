@@ -45,7 +45,7 @@ app.layout = dbc.Container([
     dbc.Row(
         dbc.Col(
             [
-                html.H1("Hot or Not: An Enquiry into Climate Change Perceptions", style = {'textAlign': 'center'}),
+                html.H1("Hot or Not: An Enquiry into Climate Change Perceptions", style = {'textAlign': 'center', "padding-top": "70px"}),
                 html.P(
                     "Welcome to our climate sentiment analysis dashboard! Our project is dedicated"
                     " to analyzing the sentiment towards climate change across the United States."
@@ -90,7 +90,7 @@ app.layout = dbc.Container([
                     )
                 ],
                 width={"size": 4},
-                className="my-3",
+                className="my-3", align = "center"
             ),
             dbc.Col(
                 [
@@ -114,8 +114,10 @@ app.layout = dbc.Container([
             html.Div([
                 html.H3("Word Clouds by Stance"),
                 html.P("""
-                The word cloud provides a visual representation of the most salient and frequently used terms related to climate change on Twitter over time. 
-                This can be a useful tool for understanding public discourse around climate change and identifying trends and shifts in language and rhetoric. 
+                The word cloud provides a visual representation of the most salient "
+                "and frequently used terms related to climate change on Twitter over time. " 
+                "This can be a useful tool for understanding public discourse around climate "
+                "change and identifying trends and shifts in language and rhetoric."
                 """),
 
                 dcc.Dropdown(
@@ -150,12 +152,58 @@ app.layout = dbc.Container([
             )
         ], width=6),
     ]),
+    dbc.Row([
+        dbc.Col([
+            html.Div([
+                html.H3("Comparison Of Tweets Sentiment in Relation to Disaster Event Declaration"),
+                html.P("""
+                The word cloud provides a visual representation of the most salient "
+                "and frequently used terms related to climate change on Twitter over time. " 
+                "This can be a useful tool for understanding public discourse around climate "
+                "change and identifying trends and shifts in language and rhetoric."
+                """),
+
+                dcc.Dropdown(
+                    options=[
+                        {'label': 'Before', 'value': 'before'},
+                        {'label': 'After', 'value': 'after'},
+                        {'label': 'Before and After', 'value': 'before and after'}
+                    ],
+                    value='Words',
+                    id='wordcloud-dropdown',
+                    style={'width': '100%'}
+                ),
+            ]),
+
+        ], width=12),
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.H3("2009", style={'textAlign': 'center'}),
+            html.Img(
+                style={'width': '100%', 'display': 'inline-block'},
+                id = "disaster_sentiment",
+                title = "2009"
+            )
+        ], width=10, align = "center"),
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.H3("2009", style={'textAlign': 'center'}),
+            html.Img(
+                style={'width': '100%', 'display': 'inline-block'},
+                id = "disaster_sentiment",
+                title = "2009"
+            )
+        ], width=10, align = "center"),
+    ]),
     dbc.Row(
         dbc.Col(
             [
                 html.P(
-                    "This project was developed by Jonathan Juarez, Jaskirat Kaur, Ridhi Purohit, and Grey Xu"
-                    " as part of the Spring 2023 course 'CAPP 30122: Computer Science and Applications II' at the University of Chicago",
+                    "This project was developed by Jonathan Juarez, Jaskirat Kaur, "
+                    "Ridhi Purohit, and Grey Xu as part of the Spring 2023 course "
+                    "'CAPP 30122: Computer Science and Applications II' at the University of Chicago",
                     className="text-muted",
                 ),
             ],
@@ -230,6 +278,27 @@ def display_wordclouds_2019(stance):
 
     return 'data:image/png;base64,{}'.format(encoded_image.decode())
 
+@app.callback(
+    Output(component_id = "disaster_sentiment", component_property = "src"),
+    Input(component_id = "wordcloud-dropdown", component_property = "value")
+)
+def display_wordclouds_2019(stance):
+    """
+    
+    This function displays the average sentiment of people before and after a
+    disaster event
+    
+    """
+    if stance == "after":
+        image_path = "./main/images/Average Sentiment of Tweets After a Disaster Declaration.png"
+    elif stance == "before":
+        image_path = "./main/images/Average Sentiment of Tweets Before a Disaster Declaration.png"
+    else:
+        image_path = "./main/images/Average Sentiment of Tweets Before & After a Disaster Declaration.png"
+
+    encoded_image = base64.b64encode(open(image_path, 'rb').read())
+
+    return 'data:image/png;base64,{}'.format(encoded_image.decode())
 
 if __name__ == '__main__':
     app.run_server(debug=True)
