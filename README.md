@@ -17,7 +17,7 @@ To get started with the App, follow these steps:
 PS:
 Due to the constraint of file size, to access the large dataset when running data_clean.py, click the following google drive to download the twitter dataset:
 https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sharing
-Move the generated file called "twitter.csv" into the subdirectory called "source". You would be able to run the data_clean.py.
+. Move the generated file called "twitter.csv" into the subdirectory called "source". You would be able to run the data_clean.py.
 
 ## Analysis Map Road
 Firstly, we will visualize the average sentiment across the United States from 2009 to 2019 using the Twitter collections dataset. This analysis will help us understand how people's sentiment towards climate change has evolved over time in different parts of the country. 
