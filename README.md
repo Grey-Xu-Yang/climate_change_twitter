@@ -7,7 +7,7 @@
 Even though the more extreme weather events have been happening more frequently globally, there is still a portion of the population who are unaware that their lives are being impacted by climate change or are ignorant of the magnitude and reality of the issue. Thus, we plan to analyze climate change patterns to determine people's sentiments and understanding of climate change. We attempt to correlate people's awareness with the intensity of climate change’s impact in their area of residence. The data set we plan to use is a twitter collections dataset  regarding climate change and human opinions. We need to find additional third party API on extreme weather events to merge with the twitter data . Finally, we need to determine whether to study the U.S or developing countries since it might be easier to do the former depending on what data we can acquire. 
 
 ## Getting Started
-To get started with Awesome App, follow these steps:
+To get started with the App, follow these steps:
 
 1. Clone the repository: git clone https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not.git
 2. Run poetry install to install the necessary packages
