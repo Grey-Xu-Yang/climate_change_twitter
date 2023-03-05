@@ -10,9 +10,9 @@ Even though the more extreme weather events have been happening more frequently 
 To get started with the App, follow these steps:
 
 1. Clone the repository: git clone https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not.git
-2. Run __poetry install__ to install the necessary packages
-3. Run __poetry shell__ to activate the virtual environment
-4. Run __python -m main__ to open the dashboard
+2. Run * *poetry install* * to install the necessary packages
+3. Run * *poetry shell* * to activate the virtual environment
+4. Run * *python -m main* * to open the dashboard
 
 PS:
 Due to the constraint of file size, to access the large dataset when running data_clean.py, click the following google drive to download the twitter dataset:
