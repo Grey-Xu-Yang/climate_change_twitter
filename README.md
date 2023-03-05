@@ -32,7 +32,7 @@ This multi-faceted analysis will help us gain a comprehensive understanding of p
 </p>
 ### Interactive Sentiment Map
 <p align="center">
-![Alt text](./main/images/map_demo.png)
+<img src= "./main/images/map_demo.png">
 </p>
 
 ## Authors
