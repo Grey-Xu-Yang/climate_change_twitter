@@ -36,7 +36,9 @@ This multi-faceted analysis will help us gain a comprehensive understanding of p
 Jonathan Juarez
 
 Ridhi Purohit
+
 Jaskirat Kaur
+
 Grey Xu
 
 ## Contribution
