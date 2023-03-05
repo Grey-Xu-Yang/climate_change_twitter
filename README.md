@@ -45,5 +45,4 @@ Jaskirat Kaur
 
 Grey Xu
 
-## Contribution
 
