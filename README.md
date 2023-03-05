@@ -27,10 +27,13 @@ This multi-faceted analysis will help us gain a comprehensive understanding of p
 
 ## Demo on Visulization
 #### Word Cloud Comparison
+<p align="center">
 ![Alt text](./main/images/wordcloud_Fire_2019.png)
-
+</p>
 ### Interactive Sentiment Map
+<p align="center">
 ![Alt text](./main/images/map_demo.png)
+</p>
 
 ## Authors
 Jonathan Juarez
