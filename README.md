@@ -4,7 +4,7 @@
 ## Climate Change Anlaysis on Twitter Data with Disaster Events
 
 ## Description
-Even though the more extreme weather events have been happening more frequently globally, there is still a portion of the population who are unaware that their lives are being impacted by climate change or are ignorant of the magnitude and reality of the issue. Thus, we plan to analyze climate change patterns to determine people's sentiments and understanding of climate change. We attempt to correlate people's awareness with the intensity of climate change’s impact in their area of residence. The data set we plan to use is a twitter collections dataset  regarding climate change and human opinions. We need to find additional third party API on extreme weather events to merge with the twitter data . Finally, we need to determine whether to study the U.S or developing countries since it might be easier to do the former depending on what data we can acquire. 
+Even though the more extreme weather events have been happening more frequently globally, there is still a portion of the population who are unaware that their lives are being impacted by climate change or are ignorant of the magnitude and reality of the issue. Thus, we analyze climate change patterns to determine people's sentiments and understanding of climate change. We correlate people's awareness with the intensity of weather diaster's impact in their area of residence. The data set we plan to use is a twitter collections dataset regarding climate change and human opinions. We also find additional third party API on extreme weather events to merge with the twitter data. For the result, we will visualize our analysis on spatial distribution of people's sentiment toward climate change as well as the through the dashboard. This multi-faceted analysis will help us gain a comprehensive understanding of people's sentiments and awareness towards climate change, which can help inform effective climate change communication strategies.
 
 ## Getting Started
 To get started with the App, follow these steps:
@@ -26,7 +26,6 @@ Secondly, we will create a word cloud for the most frequent words used in tweets
 
 Lastly, we plan to conduct a regression analysis on sentiment change using an indicator of weather data. We will merge third-party API data from FEMA (Federal Emergency Management Agency) on extreme weather events with the Twitter collections dataset to understand the correlation between climate change's impact in an area and people's sentiment towards the issue. We will focus our scope on studying the U.S. 
 
-This multi-faceted analysis will help us gain a comprehensive understanding of people's sentiments and awareness towards climate change, which can help inform effective climate change communication strategies.
 
 ## Demo on Visulization
 #### Word Cloud Comparison
