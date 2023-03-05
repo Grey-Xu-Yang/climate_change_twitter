@@ -19,11 +19,10 @@ import pandas as pd
 import base64
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
-
-from data4dash import add_state_column
+from .data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
-believer_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/believer/believer_twitter.csv")
+believer_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/believer_twitter.csv")
 denier_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/denier_twitter.csv")
 neutral_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/neutral_twitter.csv")
 
@@ -202,11 +201,11 @@ def display_wordclouds_2009(stance):
     
     """
     if stance == "believer":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_believer_2009.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_believer_2009.png"
     elif stance == "denier":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_denier_2009.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_denier_2009.png"
     else:
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_neutral_2009.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_neutral_2009.png"
        
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
@@ -223,11 +222,11 @@ def display_wordclouds_2019(stance):
     
     """
     if stance == "believer":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_believer_2019.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_believer_2018.png"
     elif stance == "denier":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_denier_2019.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_denier_2018.png"
     else:
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_neutral_2019.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_neutral_2018.png"
 
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
