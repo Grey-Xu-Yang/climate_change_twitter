@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 year,state_FIP,topic,stance,gender,aggressiveness,temperature_avg,sentiment
 2006,06,Ideological Positions on Global Warming,neutral,male,aggressive,1.28819245,0.053382615983486204
 2006,36,Weather Extremes,neutral,undefined,aggressive,-1.1147681,0.5757773507595062
@@ -633,3 +634,640 @@ year,state_FIP,topic,stance,gender,aggressiveness,temperature_avg,sentiment
 2019,54,Global stance,believer,male,not aggressive,5.761240209370694,-0.1119700070791299
 2019,55,Global stance,believer,male,not aggressive,5.4619634060444255,-0.04993731927710826
 2019,56,Global stance,believer,male,not aggressive,3.4043195247771836,-0.06492237964645843
+=======
+year,state_FIP,topic,stance,gender,aggressiveness,state_name,temperature_avg,sentiment
+2006,06,Ideological Positions on Global Warming,neutral,male,aggressive,California,1.28819245,0.053382615983486204
+2006,36,Weather Extremes,neutral,undefined,aggressive,New York,-1.1147681,0.5757773507595062
+2006,37,Weather Extremes,denier,male,aggressive,North Carolina,5.4781747,-0.5650276006937027
+2007,01,Donald Trump versus Science,denier,female,aggressive,Alabama,1.3719364,-0.5783089321454365
+2007,04,Weather Extremes,neutral,male,not aggressive,Arizona,0.7126288482400001,-0.06649805735904452
+2007,05,Weather Extremes,believer,male,aggressive,Arkansas,3.5660832,0.6006779602766037
+2007,06,Weather Extremes,neutral,male,aggressive,California,0.7567276025620439,0.024091894823720848
+2007,08,Weather Extremes,neutral,male,not aggressive,Colorado,0.9268728407692307,-0.03009796685155456
+2007,09,Weather Extremes,neutral,male,aggressive,Connecticut,-0.478387965,-0.17361257305939992
+2007,10,Impact of Resource Overconsumption,neutral,male,aggressive,Delaware,-2.895826,-0.4129565458059311
+2007,11,Weather Extremes,neutral,male,not aggressive,,1.4282056115555557,-0.13892504694360064
+2007,12,Weather Extremes,neutral,male,not aggressive,Florida,0.7102510495238095,-0.07359096527023921
+2007,13,Weather Extremes,neutral,male,not aggressive,Georgia,4.384732916923077,-0.18228588655845268
+2007,16,Donald Trump versus Science,neutral,male,not aggressive,Idaho,0.74542034,0.8239756184577942
+2007,17,Weather Extremes,neutral,male,aggressive,Illinois,0.4196169045000001,-0.0020240878721284688
+2007,18,Weather Extremes,neutral,male,not aggressive,Indiana,1.7539558507692308,-0.1076384558310002
+2007,19,Weather Extremes,neutral,male,aggressive,Iowa,1.4365267333333334,-0.5342567955732346
+2007,20,Weather Extremes,neutral,male,not aggressive,Kansas,-3.2079957,0.4817049245595932
+2007,21,Weather Extremes,neutral,male,not aggressive,Kentucky,1.8057594519999998,-0.1601353837807973
+2007,23,Weather Extremes,neutral,male,aggressive,Maine,-0.9240645940000001,-0.02746366545968242
+2007,24,Weather Extremes,neutral,male,aggressive,Maryland,2.584188656,-0.11772475148148007
+2007,25,Weather Extremes,neutral,male,not aggressive,Massachusetts,0.3811852795454546,0.015880536114170254
+2007,26,Weather Extremes,neutral,male,aggressive,Michigan,2.9640665245,0.08092947574448428
+2007,27,Weather Extremes,believer,male,aggressive,Minnesota,-0.9305859353333332,-0.11068350747845924
+2007,28,Seriousness of Gas Emissions,believer,male,not aggressive,Mississippi,-2.56919978,0.13394432970225206
+2007,29,Global stance,believer,male,not aggressive,Missouri,1.5491028564864866,-0.09011707279457139
+2007,31,Weather Extremes,believer,male,not aggressive,Nebraska,2.0811660333333335,-0.035684438378470275
+2007,32,Global stance,neutral,male,aggressive,Nevada,2.5759971,0.3351411117474238
+2007,33,Weather Extremes,neutral,male,not aggressive,New Hampshire,-1.129366274,-0.10706114454855997
+2007,34,Weather Extremes,neutral,male,not aggressive,New Jersey,-2.352961816666667,0.0995007803903686
+2007,35,Weather Extremes,believer,male,aggressive,New Mexico,0.47590541709425,0.17687332472205164
+2007,36,Weather Extremes,neutral,male,not aggressive,New York,0.6500666108450704,-0.03827691071008813
+2007,37,Weather Extremes,neutral,male,not aggressive,North Carolina,3.1153079469565217,-0.07446012729250866
+2007,39,Weather Extremes,neutral,male,not aggressive,Ohio,1.1614148838214289,-0.013970035115904859
+2007,40,Seriousness of Gas Emissions,neutral,male,aggressive,Oklahoma,-1.1859784000000002,-0.19041200104157124
+2007,41,Weather Extremes,neutral,male,aggressive,Oregon,-0.007695991000000091,-0.009233706660359008
+2007,42,Weather Extremes,neutral,male,not aggressive,Pennsylvania,-1.7838371183333332,0.1186472316790644
+2007,45,Donald Trump versus Science,neutral,male,aggressive,South Carolina,5.39828325,-0.23820645070318822
+2007,46,Weather Extremes,believer,male,aggressive,South Dakota,7.2568,-0.5047060569127401
+2007,47,Weather Extremes,believer,male,aggressive,Tennessee,2.876157026521739,-0.08004731492834968
+2007,48,Weather Extremes,neutral,male,not aggressive,Texas,-0.22105537886792456,-0.03170409193410566
+2007,49,Weather Extremes,neutral,male,aggressive,Utah,0.8026469833333328,-0.054978459958235415
+2007,50,Weather Extremes,believer,female,aggressive,Vermont,3.085783333333333,-0.4402724753962623
+2007,51,Donald Trump versus Science,neutral,male,aggressive,Virginia,0.15373260470588251,0.013046373552434558
+2007,53,Weather Extremes,neutral,male,aggressive,Washington,-0.7506041137142857,-0.12321218646114768
+2007,55,Weather Extremes,neutral,male,aggressive,Wisconsin,1.7090259,-0.28833948666349285
+2008,01,Weather Extremes,neutral,male,aggressive,Alabama,1.470554045111111,-0.04687965272816286
+2008,04,Weather Extremes,neutral,male,not aggressive,Arizona,-0.1959609664154929,-0.09968468301487102
+2008,05,Weather Extremes,neutral,male,not aggressive,Arkansas,-0.0737765507692308,0.11219947458625115
+2008,06,Weather Extremes,neutral,male,not aggressive,California,0.47843094966803396,-0.03227108291862343
+2008,08,Weather Extremes,neutral,male,not aggressive,Colorado,-0.7421710691719456,-0.08554906637628185
+2008,09,Weather Extremes,neutral,male,not aggressive,Connecticut,0.8948525406666668,-0.1002308105085346
+2008,10,Importance of Human Intervantion,neutral,male,not aggressive,Delaware,-0.48086254833333325,-0.15721896628075174
+2008,11,Weather Extremes,believer,male,not aggressive,,0.12659050611224495,-0.0216648179057784
+2008,12,Weather Extremes,neutral,male,not aggressive,Florida,-0.021145213848360676,-0.02772783920974681
+2008,13,Weather Extremes,neutral,male,aggressive,Georgia,-0.5570475065774648,-0.11979215353177758
+2008,16,Weather Extremes,believer,male,not aggressive,Idaho,-0.3613110471875,-0.09558948757167314
+2008,17,Weather Extremes,neutral,male,aggressive,Illinois,-0.575601153137851,-0.02839393415619398
+2008,18,Weather Extremes,neutral,male,not aggressive,Indiana,-0.8079130861743119,0.04722342446297853
+2008,19,Weather Extremes,neutral,male,aggressive,Iowa,-2.159765106111111,-0.12279817820036597
+2008,20,Weather Extremes,neutral,male,not aggressive,Kansas,-0.3760494248717949,-0.023142851144303218
+2008,21,Weather Extremes,neutral,male,not aggressive,Kentucky,-0.33982953753846157,-0.12839151264803697
+2008,22,Weather Extremes,neutral,male,aggressive,Louisiana,-1.484733522105263,-0.04244851148660229
+2008,23,Weather Extremes,believer,male,not aggressive,Maine,0.027833377674418604,-0.0787946519210749
+2008,24,Weather Extremes,neutral,male,not aggressive,Maryland,0.21768984937288133,-0.07359513444653604
+2008,25,Weather Extremes,neutral,male,not aggressive,Massachusetts,0.654181367560079,0.008115513593327609
+2008,26,Weather Extremes,neutral,male,aggressive,Michigan,-1.1342989160389612,-0.0861209041358202
+2008,27,Global stance,believer,female,not aggressive,Minnesota,-0.2900344635742358,-0.10043077981198192
+2008,28,Weather Extremes,believer,male,aggressive,Mississippi,1.2171025837142857,-0.03982258106581182
+2008,29,Weather Extremes,neutral,male,not aggressive,Missouri,-1.667596871036036,0.01783100890157412
+2008,30,Weather Extremes,neutral,male,not aggressive,Montana,-1.8904617106250001,-0.20321287126943016
+2008,31,Weather Extremes,neutral,male,not aggressive,Nebraska,-2.043163086296296,-0.018326926346767098
+2008,32,Weather Extremes,believer,male,not aggressive,Nevada,0.04608965184931507,-0.10944926127261222
+2008,33,Weather Extremes,believer,male,not aggressive,New Hampshire,-0.3204650104166667,0.04815223632945126
+2008,34,Weather Extremes,neutral,male,not aggressive,New Jersey,1.4789812690697675,0.015243748960198882
+2008,35,Weather Extremes,neutral,male,not aggressive,New Mexico,-0.03352366928571424,-0.03575101613781768
+2008,36,Weather Extremes,neutral,male,not aggressive,New York,0.46875542634375,-0.04120921012301927
+2008,37,Weather Extremes,neutral,male,not aggressive,North Carolina,-0.12292997686545455,-0.031613026375124656
+2008,38,Weather Extremes,neutral,male,not aggressive,North Dakota,-6.6294713,-0.1730841072831835
+2008,39,Weather Extremes,neutral,male,not aggressive,Ohio,-0.8853085689663462,-0.04540031198290178
+2008,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,-0.4623251146511628,0.011991281617557623
+2008,41,Weather Extremes,neutral,male,not aggressive,Oregon,-0.9867354513248409,-0.009057284847997378
+2008,42,Weather Extremes,neutral,male,not aggressive,Pennsylvania,-0.05556388109638554,-0.07753750079273669
+2008,44,Weather Extremes,believer,female,aggressive,Rhode Island,0.45264752727272733,-0.08171143686252517
+2008,45,Weather Extremes,neutral,male,not aggressive,South Carolina,-0.05739102345833332,-0.119901936282983
+2008,46,Weather Extremes,neutral,male,not aggressive,South Dakota,-1.3412915376851853,0.08674096444145336
+2008,47,Weather Extremes,neutral,male,not aggressive,Tennessee,-0.22337271890047386,-0.07415605196459366
+2008,48,Weather Extremes,neutral,male,not aggressive,Texas,0.10440525776949741,-0.0936047551984858
+2008,49,Weather Extremes,neutral,male,not aggressive,Utah,-0.5904645481354167,-0.06558803595620574
+2008,50,Global stance,believer,male,aggressive,Vermont,0.6033954397142857,-0.1317043173909153
+2008,51,Weather Extremes,neutral,male,not aggressive,Virginia,0.9912046904038462,-0.041901564990147036
+2008,53,Weather Extremes,neutral,male,not aggressive,Washington,-1.353918533416279,-0.07370487033317814
+2008,54,Global stance,neutral,male,not aggressive,West Virginia,-1.0599825975757575,0.028038785454824366
+2008,55,Weather Extremes,neutral,male,not aggressive,Wisconsin,-1.4015874750384616,-0.080976821831529
+2008,56,Weather Extremes,neutral,female,not aggressive,Wyoming,4.37069,0.5402515519618988
+2009,01,Weather Extremes,denier,male,not aggressive,Alabama,-0.5072224393094193,-0.08224853010048691
+2009,04,Weather Extremes,believer,male,not aggressive,Arizona,0.32194393304524954,-0.04713896950557405
+2009,05,Weather Extremes,neutral,male,not aggressive,Arkansas,-1.0514649343063585,-0.0316548586660995
+2009,06,Global stance,believer,male,not aggressive,California,0.09653008089251072,-0.023762838760013474
+2009,08,Weather Extremes,believer,male,not aggressive,Colorado,-1.3922434116056106,0.013003883404234215
+2009,09,Weather Extremes,believer,male,not aggressive,Connecticut,-0.20872868882136897,-0.02538970861421535
+2009,10,Weather Extremes,believer,male,not aggressive,Delaware,-0.6683465620330578,-0.08293682384331182
+2009,11,Global stance,believer,male,not aggressive,,-0.14408511222106024,0.015338239259413064
+2009,12,Weather Extremes,believer,male,not aggressive,Florida,0.48265412649486933,-0.06880916700663116
+2009,13,Weather Extremes,neutral,male,not aggressive,Georgia,-0.3782758639730417,-0.051932748470508175
+2009,16,Weather Extremes,believer,male,not aggressive,Idaho,-1.059449723645946,-0.033605355002168893
+2009,17,Weather Extremes,believer,male,not aggressive,Illinois,-0.7251463197334374,-0.03636574239863028
+2009,18,Weather Extremes,neutral,male,not aggressive,Indiana,-0.8958277137001079,-0.030472513926635778
+2009,19,Weather Extremes,believer,male,not aggressive,Iowa,-1.4693297575095654,-0.031383315109386446
+2009,20,Weather Extremes,neutral,male,not aggressive,Kansas,-1.6142284231273876,-0.052992605586141814
+2009,21,Weather Extremes,neutral,male,not aggressive,Kentucky,-0.8266720704729033,-0.11260640272052903
+2009,22,Weather Extremes,neutral,male,not aggressive,Louisiana,-0.193888335691502,-0.06789816659889183
+2009,23,Weather Extremes,believer,male,not aggressive,Maine,-0.14431603657272724,-0.018869932029240886
+2009,24,Global stance,believer,male,not aggressive,Maryland,-0.15581584605019744,0.005779726271134964
+2009,25,Weather Extremes,believer,male,not aggressive,Massachusetts,0.19974355360300192,0.003237525198641958
+2009,26,Weather Extremes,neutral,male,not aggressive,Michigan,-0.7065238694138343,-0.04388686995264077
+2009,27,Global stance,believer,female,not aggressive,Minnesota,-0.9122698463118001,-0.0708659648775574
+2009,28,Weather Extremes,believer,male,not aggressive,Mississippi,-0.23006241874434524,-0.1894516516013616
+2009,29,Weather Extremes,neutral,male,not aggressive,Missouri,-1.2259748821933456,-0.06453401521380354
+2009,30,Global stance,believer,male,not aggressive,Montana,-2.067912505178302,0.021082469793378907
+2009,31,Weather Extremes,believer,male,not aggressive,Nebraska,-1.4564742963619304,-0.030009171827679242
+2009,32,Weather Extremes,neutral,male,not aggressive,Nevada,-0.4226722127867435,-0.05490009382486433
+2009,33,Weather Extremes,believer,male,not aggressive,New Hampshire,0.023826512282608684,-0.034347174007229565
+2009,34,Weather Extremes,believer,male,not aggressive,New Jersey,-0.25796033332021134,-0.04366648005645274
+2009,35,Global stance,believer,male,not aggressive,New Mexico,-0.3920025932389982,-0.045519524207189695
+2009,36,Weather Extremes,believer,male,not aggressive,New York,-0.16713907215778148,-0.0014135647693733254
+2009,37,Weather Extremes,believer,male,not aggressive,North Carolina,-0.4631313489188464,-0.032605926614962
+2009,38,Weather Extremes,neutral,male,not aggressive,North Dakota,-1.6663814276916127,-0.057773429239457635
+2009,39,Weather Extremes,neutral,male,not aggressive,Ohio,-0.6693187026001647,-0.049566551123855176
+2009,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,-1.1980133790267686,-0.0988106963834539
+2009,41,Global stance,believer,male,not aggressive,Oregon,-0.5461938781589313,0.025431351769295143
+2009,42,Weather Extremes,believer,male,not aggressive,Pennsylvania,-0.0038115513527571154,-0.055185613873540894
+2009,44,Global stance,believer,male,not aggressive,Rhode Island,0.0188110195952381,0.02722514170474064
+2009,45,Weather Extremes,neutral,male,not aggressive,South Carolina,-0.41613528165828334,-0.05840296189847325
+2009,46,Weather Extremes,believer,male,not aggressive,South Dakota,-2.297348015672043,-0.07503777479258346
+2009,47,Weather Extremes,believer,male,not aggressive,Tennessee,-0.5547332938502192,-0.013873243890379063
+2009,48,Weather Extremes,neutral,male,not aggressive,Texas,-0.465669666246011,-0.06910600951092834
+2009,49,Weather Extremes,believer,male,not aggressive,Utah,-1.2558750841448276,-0.0539481051668893
+2009,50,Global stance,believer,male,not aggressive,Vermont,0.10689758146635735,0.05383052633067603
+2009,51,Global stance,believer,male,not aggressive,Virginia,-0.3208819876943089,-0.04503041916004364
+2009,53,Global stance,believer,male,not aggressive,Washington,-0.3846692572503848,-0.023287993922876296
+2009,54,Weather Extremes,neutral,male,not aggressive,West Virginia,-0.9278484270625,-0.023619205488491606
+2009,55,Weather Extremes,neutral,male,not aggressive,Wisconsin,-1.0132322591666667,-0.04439925246370878
+2009,56,Global stance,believer,male,aggressive,Wyoming,-1.1327422908974942,-0.09966816229366042
+2010,01,Weather Extremes,neutral,male,not aggressive,Alabama,-2.3191005959086253,-0.10621741757831864
+2010,04,Weather Extremes,neutral,male,not aggressive,Arizona,-0.1678158101072,-0.07915757192990579
+2010,05,Weather Extremes,neutral,male,not aggressive,Arkansas,-1.595629771053371,-0.08543160997283965
+2010,06,Weather Extremes,believer,male,not aggressive,California,-0.4110484905054743,-0.07214947746646237
+2010,08,Weather Extremes,believer,male,not aggressive,Colorado,0.005620425360095275,-0.011388057622535273
+2010,09,Weather Extremes,neutral,male,not aggressive,Connecticut,0.8991815078557692,-0.07555018169236905
+2010,10,Weather Extremes,neutral,male,not aggressive,Delaware,0.13036901850000007,-0.11543660303850065
+2010,11,Weather Extremes,believer,male,not aggressive,,0.6089317822783346,-0.04148783310413032
+2010,12,Weather Extremes,neutral,male,not aggressive,Florida,-2.670064347564087,-0.0443362188446197
+2010,13,Weather Extremes,neutral,male,not aggressive,Georgia,-1.4202920651107236,-0.09509356473780056
+2010,16,Weather Extremes,believer,male,not aggressive,Idaho,-0.29429771548987854,-0.06003006500775952
+2010,17,Weather Extremes,believer,male,not aggressive,Illinois,0.5740564189091751,-0.048074478745135034
+2010,18,Weather Extremes,neutral,male,not aggressive,Indiana,-0.10670087623684209,-0.028532790689982265
+2010,19,Weather Extremes,neutral,male,not aggressive,Iowa,-0.8438983503250602,-0.06551406437988826
+2010,20,Weather Extremes,neutral,male,not aggressive,Kansas,-1.0673075930136053,-0.07416208411141162
+2010,21,Weather Extremes,neutral,male,not aggressive,Kentucky,-1.1293283589095746,-0.0809883348405641
+2010,22,Weather Extremes,neutral,male,not aggressive,Louisiana,-2.182607423977827,-0.08747724269983585
+2010,23,Weather Extremes,neutral,male,not aggressive,Maine,2.3678426595634328,-0.11873767683516988
+2010,24,Weather Extremes,believer,male,not aggressive,Maryland,0.5059031382899011,-0.03806696366836561
+2010,25,Weather Extremes,believer,male,not aggressive,Massachusetts,1.6584941503306299,-0.026956169244564798
+2010,26,Weather Extremes,believer,male,not aggressive,Michigan,1.127540123678701,-0.0814093778442781
+2010,27,Weather Extremes,believer,male,not aggressive,Minnesota,0.23212847584518562,-0.07241687102106058
+2010,28,Weather Extremes,believer,male,not aggressive,Mississippi,-2.587756158456767,-0.16968983872048937
+2010,29,Weather Extremes,neutral,male,not aggressive,Missouri,-1.6566718461830456,-0.07746161072241116
+2010,30,Weather Extremes,neutral,male,not aggressive,Montana,-0.9007707271111111,-0.13157769785108198
+2010,31,Weather Extremes,neutral,male,not aggressive,Nebraska,-1.3358821949372386,-0.08525821462476181
+2010,32,Weather Extremes,neutral,male,not aggressive,Nevada,-0.4307685188308703,-0.08454194595654643
+2010,33,Weather Extremes,believer,male,not aggressive,New Hampshire,1.9167553946746032,-0.03137077486457309
+2010,34,Weather Extremes,believer,male,not aggressive,New Jersey,0.7343577536089015,-0.041227980369946314
+2010,35,Weather Extremes,believer,male,not aggressive,New Mexico,-0.01653767588164791,-0.03316222914436041
+2010,36,Weather Extremes,neutral,male,not aggressive,New York,1.134461621414488,-0.049970087437504064
+2010,37,Weather Extremes,believer,male,not aggressive,North Carolina,-0.8167204562401552,-0.10782251026327697
+2010,38,Weather Extremes,neutral,male,not aggressive,North Dakota,-1.7160819037058823,-0.023103726531559295
+2010,39,Weather Extremes,neutral,male,not aggressive,Ohio,-0.2921104304159509,-0.07881094457590544
+2010,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,-1.6039385707894735,-0.1264244347588486
+2010,41,Weather Extremes,believer,male,not aggressive,Oregon,0.2138062304503251,-0.02181780668499729
+2010,42,Weather Extremes,neutral,male,not aggressive,Pennsylvania,0.30949831732191135,-0.08477063588609185
+2010,44,Weather Extremes,believer,male,not aggressive,Rhode Island,1.444912332635659,-0.03895519765946005
+2010,45,Weather Extremes,neutral,male,not aggressive,South Carolina,-2.209876821578871,-0.09286337545121669
+2010,46,Weather Extremes,believer,male,not aggressive,South Dakota,-2.035686169574468,-0.13453248085769956
+2010,47,Weather Extremes,neutral,male,not aggressive,Tennessee,-1.4405744751336407,-0.07768213733672565
+2010,48,Weather Extremes,neutral,male,not aggressive,Texas,-1.386510136876473,-0.07306753115983736
+2010,49,Weather Extremes,believer,male,not aggressive,Utah,-0.5657106538314087,-0.0386172561850851
+2010,50,Impact of Resource Overconsumption,believer,male,not aggressive,Vermont,1.8071521536313992,0.10642264822170835
+2010,51,Weather Extremes,believer,male,not aggressive,Virginia,-0.2327000297604301,-0.05079501014089892
+2010,53,Weather Extremes,believer,male,not aggressive,Washington,0.0645260790581283,0.012486363090805596
+2010,54,Weather Extremes,believer,male,not aggressive,West Virginia,-1.5747255932558921,-0.0888557899928507
+2010,55,Weather Extremes,neutral,male,not aggressive,Wisconsin,1.4283925716917054,-0.023746453174319445
+2010,56,Weather Extremes,denier,male,aggressive,Wyoming,-0.10935058445248864,-0.19474063642740513
+2011,01,Weather Extremes,neutral,male,not aggressive,Alabama,-0.4014835130967742,-0.10724891414032904
+2011,04,Weather Extremes,neutral,male,not aggressive,Arizona,-0.4020967010068525,-0.10692256053315921
+2011,05,Weather Extremes,neutral,male,not aggressive,Arkansas,-0.6173447879790795,-0.15314453805991587
+2011,06,Weather Extremes,neutral,male,not aggressive,California,-0.596673022150893,-0.06971343036296682
+2011,08,Weather Extremes,neutral,male,not aggressive,Colorado,-1.3212970946749998,-0.05810535286560591
+2011,09,Weather Extremes,neutral,male,not aggressive,Connecticut,1.178652496211832,-0.07742042061432552
+2011,10,Weather Extremes,neutral,male,not aggressive,Delaware,2.477848011421053,-0.13108741026379112
+2011,11,Weather Extremes,believer,male,not aggressive,,1.4117388371518182,-0.06176582740834286
+2011,12,Weather Extremes,neutral,male,not aggressive,Florida,0.3939605037733649,-0.07165900396544685
+2011,13,Weather Extremes,neutral,male,not aggressive,Georgia,0.7781637946066956,-0.05823742028918551
+2011,16,Weather Extremes,neutral,male,not aggressive,Idaho,-0.8411572756153846,-0.11604604052667652
+2011,17,Weather Extremes,neutral,male,not aggressive,Illinois,0.9464799295387412,-0.015241261126836525
+2011,18,Weather Extremes,neutral,male,not aggressive,Indiana,0.7120334884162303,-0.04679429843998096
+2011,19,Weather Extremes,neutral,male,not aggressive,Iowa,0.40149307088338193,-0.02653212232308759
+2011,20,Weather Extremes,neutral,male,not aggressive,Kansas,-0.5868219082949642,-0.0584480767279508
+2011,21,Weather Extremes,neutral,male,not aggressive,Kentucky,1.1257700380133333,-0.0596205710936641
+2011,22,Weather Extremes,neutral,male,not aggressive,Louisiana,-0.3241187212152505,-0.02093202068053757
+2011,23,Weather Extremes,believer,male,aggressive,Maine,1.6039285832276424,-0.12498169508037406
+2011,24,Weather Extremes,neutral,male,not aggressive,Maryland,1.5808798002067552,-0.05626524228282299
+2011,25,Weather Extremes,neutral,male,not aggressive,Massachusetts,1.7101923482550776,-0.04056310556794293
+2011,26,Weather Extremes,neutral,male,not aggressive,Michigan,0.7286342778320773,-0.04614827392135564
+2011,27,Weather Extremes,neutral,male,not aggressive,Minnesota,0.45679910429826937,-0.09855068152084895
+2011,28,Weather Extremes,neutral,male,not aggressive,Mississippi,-0.8152419965593221,-0.19310134445545082
+2011,29,Weather Extremes,believer,male,not aggressive,Missouri,0.22178352448816469,-0.11377826490103558
+2011,30,Weather Extremes,neutral,male,not aggressive,Montana,-1.3168671280747661,-0.1151953250946268
+2011,31,Weather Extremes,neutral,male,not aggressive,Nebraska,-0.4335688953964468,-0.08083255942644103
+2011,32,Weather Extremes,neutral,male,not aggressive,Nevada,-0.665832238498155,-0.08686342284842351
+2011,33,Weather Extremes,neutral,male,not aggressive,New Hampshire,0.616106715894309,-0.10927995659468273
+2011,34,Weather Extremes,neutral,male,not aggressive,New Jersey,1.4120596581525215,-0.06632104076868774
+2011,35,Weather Extremes,neutral,male,not aggressive,New Mexico,-0.7375059665800867,-0.08143986874456442
+2011,36,Weather Extremes,neutral,male,not aggressive,New York,1.5651224498049798,-0.05134268714072425
+2011,37,Weather Extremes,neutral,male,not aggressive,North Carolina,1.1133995618726862,-0.08848011766224652
+2011,38,Weather Extremes,neutral,male,not aggressive,North Dakota,0.8696830374307692,-0.011727483282767431
+2011,39,Weather Extremes,neutral,male,not aggressive,Ohio,1.3965264626528942,-0.06440653238742007
+2011,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,-0.08179300527638184,-0.08231583370809528
+2011,41,Weather Extremes,believer,male,not aggressive,Oregon,-0.5307930131676867,-0.07190746401959965
+2011,42,Weather Extremes,neutral,male,not aggressive,Pennsylvania,1.2128518310264942,-0.03567250078201943
+2011,44,Weather Extremes,neutral,male,not aggressive,Rhode Island,1.9268661517959182,-0.011265817404698598
+2011,45,Weather Extremes,neutral,male,not aggressive,South Carolina,0.5317319752768924,-0.07574529076729863
+2011,46,Weather Extremes,neutral,male,not aggressive,South Dakota,-0.32077313625000003,0.016311468252167116
+2011,47,Weather Extremes,neutral,male,not aggressive,Tennessee,0.39517406077589584,-0.07185100606020364
+2011,48,Weather Extremes,neutral,male,not aggressive,Texas,0.40609704200432395,-0.09430123210511361
+2011,49,Weather Extremes,believer,male,not aggressive,Utah,-1.3978823088836922,-0.08952584709640948
+2011,50,Weather Extremes,believer,male,aggressive,Vermont,1.7925220022222224,0.002673308771968891
+2011,51,Weather Extremes,neutral,male,not aggressive,Virginia,1.2232057279816932,-0.06096384411823002
+2011,53,Weather Extremes,neutral,male,not aggressive,Washington,-0.7723475903761662,-0.08194077110375036
+2011,54,Weather Extremes,neutral,male,not aggressive,West Virginia,1.005192831252551,-0.05193359970602737
+2011,55,Weather Extremes,neutral,male,not aggressive,Wisconsin,0.30260675646924173,-0.09919835600956516
+2011,56,Weather Extremes,denier,male,aggressive,Wyoming,-0.2766376944568528,-0.19341911216016733
+2012,01,Weather Extremes,neutral,male,not aggressive,Alabama,1.4960470874278522,-0.07964112369827568
+2012,04,Weather Extremes,believer,male,not aggressive,Arizona,1.293376761040453,-0.09584023604718007
+2012,05,Weather Extremes,neutral,male,not aggressive,Arkansas,3.617479899268293,-0.04497697428320351
+2012,06,Weather Extremes,believer,male,not aggressive,California,1.0100422689673039,-0.0251744612840617
+2012,08,Weather Extremes,believer,male,not aggressive,Colorado,2.5412639067025315,0.01315749003455288
+2012,09,Weather Extremes,believer,male,not aggressive,Connecticut,1.9609386346586826,-0.05070107694727021
+2012,10,Weather Extremes,believer,male,not aggressive,Delaware,2.0398501978431374,-0.017798718705856757
+2012,11,Weather Extremes,believer,male,not aggressive,,1.8631591412933057,-0.03716277535182225
+2012,12,Weather Extremes,neutral,male,not aggressive,Florida,0.5845571442226428,-0.05922239859915173
+2012,13,Weather Extremes,neutral,male,not aggressive,Georgia,2.0161332827329974,-0.05368161436803265
+2012,16,Weather Extremes,neutral,male,not aggressive,Idaho,1.3836553859135803,-0.00852017906074439
+2012,17,Weather Extremes,neutral,male,not aggressive,Illinois,5.5645105896766776,0.011154897830993974
+2012,18,Weather Extremes,neutral,male,not aggressive,Indiana,5.775087428601562,-0.03278309984317227
+2012,19,Weather Extremes,neutral,male,not aggressive,Iowa,4.689861385012552,-0.04181464683078734
+2012,20,Weather Extremes,neutral,male,not aggressive,Kansas,2.7202147914029853,-0.05185051537496262
+2012,21,Weather Extremes,neutral,male,not aggressive,Kentucky,4.356289849144385,-0.015449794144761641
+2012,22,Weather Extremes,neutral,male,not aggressive,Louisiana,1.678205059414634,-0.06591639805476743
+2012,23,Weather Extremes,neutral,male,not aggressive,Maine,2.93201130400939,-0.04608278694180248
+2012,24,Weather Extremes,neutral,male,not aggressive,Maryland,2.853777572122449,-0.05985284953337785
+2012,25,Weather Extremes,neutral,male,not aggressive,Massachusetts,2.9534635572222223,0.010864692142249062
+2012,26,Weather Extremes,neutral,male,not aggressive,Michigan,4.651005978717208,-0.01504407603490622
+2012,27,Weather Extremes,neutral,male,not aggressive,Minnesota,4.148157676671299,-0.023510100041107145
+2012,28,Weather Extremes,neutral,male,not aggressive,Mississippi,1.3143935845555557,-0.06653777828103163
+2012,29,Weather Extremes,believer,male,not aggressive,Missouri,4.108854832300766,-0.11206841562471712
+2012,30,Weather Extremes,believer,male,not aggressive,Montana,1.1626286407058823,-0.14808735066779288
+2012,31,Weather Extremes,neutral,male,not aggressive,Nebraska,3.779406536329609,-0.002622446837961812
+2012,32,Weather Extremes,neutral,male,not aggressive,Nevada,1.4532983493449685,-0.07207559607251487
+2012,33,Weather Extremes,believer,male,not aggressive,New Hampshire,3.223357540931034,0.00706716452233608
+2012,34,Weather Extremes,neutral,male,not aggressive,New Jersey,2.1563753929548435,0.031954522481637625
+2012,35,Weather Extremes,believer,male,not aggressive,New Mexico,1.2672716688125,0.007556930886734531
+2012,36,Weather Extremes,neutral,male,not aggressive,New York,2.627876689950122,-0.010526995175751697
+2012,37,Weather Extremes,neutral,male,not aggressive,North Carolina,2.0137267757099155,-0.023918691765378065
+2012,38,Weather Extremes,neutral,male,not aggressive,North Dakota,3.8304680179166666,0.06068384644758564
+2012,39,Weather Extremes,neutral,male,not aggressive,Ohio,4.12179086314809,-0.014130324580738275
+2012,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,3.8044415906462583,-0.06577010200056907
+2012,41,Weather Extremes,believer,male,not aggressive,Oregon,0.2625898654666667,-0.045527446574069645
+2012,42,Weather Extremes,neutral,male,not aggressive,Pennsylvania,2.9561161570917363,-0.017981501731988123
+2012,44,Weather Extremes,neutral,male,not aggressive,Rhode Island,2.000930459912088,-0.046817977480338065
+2012,45,Weather Extremes,neutral,male,not aggressive,South Carolina,2.3042480936645835,-0.037405974538585934
+2012,46,Weather Extremes,neutral,male,aggressive,South Dakota,4.623686947804878,0.019688986932187055
+2012,47,Weather Extremes,neutral,male,not aggressive,Tennessee,2.811012975468675,-0.018626494627390428
+2012,48,Weather Extremes,neutral,male,not aggressive,Texas,2.20199790923716,-0.020752277617243714
+2012,49,Weather Extremes,neutral,male,not aggressive,Utah,2.60371213172561,0.04983439590466697
+2012,50,Undefined / One Word Hashtags,believer,male,aggressive,Vermont,1.623448725662893,0.06860666438634168
+2012,51,Weather Extremes,neutral,male,not aggressive,Virginia,2.5563785160292096,-0.027256524535215106
+2012,53,Weather Extremes,believer,male,not aggressive,Washington,0.18658974673485867,-0.02356847814699885
+2012,54,Weather Extremes,neutral,male,not aggressive,West Virginia,3.1054621439068324,0.0017024529827298933
+2012,55,Weather Extremes,neutral,male,not aggressive,Wisconsin,5.3063978857075815,0.00701246945851017
+2012,56,Weather Extremes,denier,male,not aggressive,Wyoming,2.311472488292683,-0.12133489253502171
+2013,01,Weather Extremes,neutral,male,not aggressive,Alabama,-0.5305897158035157,-0.09935023528856969
+2013,04,Weather Extremes,believer,male,not aggressive,Arizona,0.24098772691805276,-0.09566009346015272
+2013,05,Weather Extremes,neutral,male,not aggressive,Arkansas,-2.2219491711828794,-0.05356179544866578
+2013,06,Weather Extremes,believer,male,not aggressive,California,0.5358054848525379,-0.06330617805227311
+2013,08,Weather Extremes,believer,male,not aggressive,Colorado,-0.5838213622624855,-0.06399007078119169
+2013,09,Weather Extremes,neutral,male,not aggressive,Connecticut,0.23387315883752857,-0.07462013881452097
+2013,10,Weather Extremes,believer,male,not aggressive,Delaware,-0.014320517526881727,-0.03191064708892324
+2013,11,Weather Extremes,believer,male,not aggressive,,0.010472099810638093,-0.07027567082133965
+2013,12,Weather Extremes,neutral,male,not aggressive,Florida,0.06641570097106789,-0.12074149105086358
+2013,13,Weather Extremes,neutral,male,not aggressive,Georgia,-0.5836624660980122,-0.09529905559938477
+2013,16,Weather Extremes,believer,male,not aggressive,Idaho,-0.23599042490740738,-0.10116876641946192
+2013,17,Weather Extremes,neutral,male,not aggressive,Illinois,-0.4637768543737269,-0.07218311404896108
+2013,18,Weather Extremes,neutral,male,not aggressive,Indiana,-1.1679764586253165,-0.05844048617971265
+2013,19,Weather Extremes,neutral,male,not aggressive,Iowa,-1.8320523112767624,-0.07430085223380785
+2013,20,Weather Extremes,neutral,male,not aggressive,Kansas,-2.230262457538283,-0.11576249512681308
+2013,21,Weather Extremes,neutral,male,not aggressive,Kentucky,-0.7621501139469274,-0.07298623746933999
+2013,22,Weather Extremes,neutral,male,not aggressive,Louisiana,-0.12719516836516853,-0.02376398993169157
+2013,23,Weather Extremes,believer,male,not aggressive,Maine,0.9750231769959183,-0.03230262464380139
+2013,24,Weather Extremes,neutral,male,not aggressive,Maryland,0.5985840085602224,-0.0378161069312058
+2013,25,Weather Extremes,believer,male,not aggressive,Massachusetts,0.5848109330201546,-0.06124787246664835
+2013,26,Weather Extremes,neutral,male,not aggressive,Michigan,-0.5261125590801629,-0.10464261378869785
+2013,27,Weather Extremes,neutral,male,not aggressive,Minnesota,-2.338123401686747,-0.08095153401891794
+2013,28,Weather Extremes,believer,male,not aggressive,Mississippi,-0.8017284423333333,-0.20708112850988464
+2013,29,Weather Extremes,neutral,male,not aggressive,Missouri,-1.6652943701006802,-0.1041844078020145
+2013,30,Weather Extremes,believer,male,not aggressive,Montana,-1.5699737923277313,-0.0587914419234138
+2013,31,Weather Extremes,neutral,male,not aggressive,Nebraska,-2.1315470775308643,-0.08221945448818933
+2013,32,Weather Extremes,believer,male,not aggressive,Nevada,0.28942356419230764,-0.08977478715186475
+2013,33,Weather Extremes,neutral,male,not aggressive,New Hampshire,0.12351383476529412,-0.1550017432209729
+2013,34,Weather Extremes,believer,male,not aggressive,New Jersey,0.885706455949692,-0.016567665721532197
+2013,35,Weather Extremes,believer,male,not aggressive,New Mexico,0.13180046978968257,-0.027356834731614585
+2013,36,Weather Extremes,believer,male,not aggressive,New York,0.5029321358244456,-0.03579938963844772
+2013,37,Weather Extremes,neutral,male,not aggressive,North Carolina,-0.22751180027420856,-0.08518860811095418
+2013,38,Weather Extremes,neutral,male,not aggressive,North Dakota,-3.9080284629166666,-0.16226261618291363
+2013,39,Weather Extremes,neutral,male,not aggressive,Ohio,-0.4774468231474623,-0.08758244998627633
+2013,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,-2.115681763048969,-0.10351486867240614
+2013,41,Weather Extremes,believer,male,not aggressive,Oregon,-0.16806286971231674,-0.06611828546958766
+2013,42,Weather Extremes,neutral,male,not aggressive,Pennsylvania,0.04071513345810252,-0.07110977413260267
+2013,44,Weather Extremes,neutral,male,not aggressive,Rhode Island,0.9746710691492536,-0.03944534842129748
+2013,45,Weather Extremes,neutral,male,not aggressive,South Carolina,-0.03759788910100203,-0.04078799098101018
+2013,46,Weather Extremes,neutral,male,not aggressive,South Dakota,-2.5386955168292684,-0.11590088906422363
+2013,47,Weather Extremes,neutral,male,not aggressive,Tennessee,-0.8443430480126979,-0.12340241023860406
+2013,48,Weather Extremes,neutral,male,not aggressive,Texas,-0.3174217589117497,-0.08735214344049415
+2013,49,Weather Extremes,believer,male,not aggressive,Utah,-0.7214269497643098,-0.11579159299962855
+2013,50,Undefined / One Word Hashtags,believer,male,aggressive,Vermont,0.23101306374363992,-0.02425513333523649
+2013,51,Weather Extremes,neutral,male,not aggressive,Virginia,-0.056773080943008036,-0.05526488430019265
+2013,53,Weather Extremes,believer,male,not aggressive,Washington,-0.06689391334139538,-0.05900574356453718
+2013,54,Weather Extremes,neutral,male,not aggressive,West Virginia,0.07773031545540542,-0.08455169351498516
+2013,55,Weather Extremes,neutral,male,not aggressive,Wisconsin,-1.4345532065923297,-0.0902862857985871
+2013,56,Weather Extremes,denier,male,not aggressive,Wyoming,0.16176228662032524,-0.21338504775832748
+2014,01,Weather Extremes,neutral,male,not aggressive,Alabama,-2.555700289541349,-0.08553515251459816
+2014,04,Weather Extremes,believer,male,not aggressive,Arizona,1.1345298985841938,-0.10481907157733197
+2014,05,Weather Extremes,believer,male,not aggressive,Arkansas,-2.4573404156068377,-0.08856132692452147
+2014,06,Weather Extremes,believer,male,not aggressive,California,1.9075056829943524,-0.04896424792393362
+2014,08,Weather Extremes,believer,male,not aggressive,Colorado,-0.21104327696594685,-0.08419820561352949
+2014,09,Weather Extremes,believer,male,not aggressive,Connecticut,-0.04315766920919178,-0.021572173204299713
+2014,10,Weather Extremes,believer,male,not aggressive,Delaware,-0.8804486931827957,-0.11896803176717945
+2014,11,Weather Extremes,believer,male,not aggressive,,-0.6411095337108245,-0.041664877588821175
+2014,12,Weather Extremes,believer,male,not aggressive,Florida,-0.32941364348308316,-0.10721344812367072
+2014,13,Weather Extremes,neutral,male,not aggressive,Georgia,-1.3195303344128562,-0.10924142257213756
+2014,16,Weather Extremes,believer,male,not aggressive,Idaho,1.7996171290751446,0.027561229378768287
+2014,17,Weather Extremes,believer,male,not aggressive,Illinois,-1.8522860941269197,-0.07807635870247476
+2014,18,Weather Extremes,neutral,male,not aggressive,Indiana,-3.0819562959634657,-0.11996547298984735
+2014,19,Weather Extremes,believer,male,not aggressive,Iowa,-2.00861931993311,-0.06992640724205816
+2014,20,Weather Extremes,neutral,male,not aggressive,Kansas,-1.3565294100170575,-0.0987849851341735
+2014,21,Weather Extremes,neutral,male,not aggressive,Kentucky,-3.144580498633484,-0.11214716365733743
+2014,22,Weather Extremes,neutral,male,not aggressive,Louisiana,-1.3549033854421442,-0.055212298256190125
+2014,23,Weather Extremes,believer,male,not aggressive,Maine,0.5800008880887096,-0.08936229134065907
+2014,24,Weather Extremes,believer,male,not aggressive,Maryland,-0.9733312910379368,-0.07931595351560543
+2014,25,Weather Extremes,believer,male,not aggressive,Massachusetts,-0.13240616261337718,-0.04120524177936253
+2014,26,Weather Extremes,believer,male,not aggressive,Michigan,-2.5964286389214384,-0.09279375485304846
+2014,27,Weather Extremes,believer,male,not aggressive,Minnesota,-1.4843198986495467,-0.07324713691969471
+2014,28,Weather Extremes,believer,male,not aggressive,Mississippi,-1.8772466575667672,-0.1526835594059498
+2014,29,Weather Extremes,believer,male,not aggressive,Missouri,-1.811331672682823,-0.07645867759918613
+2014,30,Weather Extremes,believer,male,not aggressive,Montana,0.41818470636633664,-0.05139149920192883
+2014,31,Weather Extremes,neutral,male,not aggressive,Nebraska,-1.0815639892296072,-0.07451059485863117
+2014,32,Weather Extremes,believer,male,not aggressive,Nevada,1.3587758704287234,-0.11461042357935286
+2014,33,Weather Extremes,believer,male,not aggressive,New Hampshire,-0.022264742788273572,-0.11960910815909899
+2014,34,Weather Extremes,believer,male,not aggressive,New Jersey,-0.5407906890680918,-0.05479468193999403
+2014,35,Donald Trump versus Science,believer,male,not aggressive,New Mexico,0.6026188466408213,0.007287539462863072
+2014,36,Weather Extremes,believer,male,not aggressive,New York,-0.5537468002277288,-0.04461326136784715
+2014,37,Weather Extremes,neutral,male,not aggressive,North Carolina,-1.1144581126909814,-0.07180179820161643
+2014,38,Weather Extremes,neutral,male,not aggressive,North Dakota,-0.5872812559447004,0.024743474133969694
+2014,39,Weather Extremes,neutral,male,not aggressive,Ohio,-2.390181648178968,-0.0896496047904398
+2014,40,Weather Extremes,neutral,male,not aggressive,Oklahoma,-1.6470595639028571,-0.07687533509738471
+2014,41,Weather Extremes,believer,male,not aggressive,Oregon,1.3181375198720122,-0.06356968892211955
+2014,42,Weather Extremes,believer,male,not aggressive,Pennsylvania,-1.3066751666280096,-0.10878570467321332
+2014,44,Weather Extremes,believer,male,not aggressive,Rhode Island,0.03354019733823526,-0.0173104895890161
+2014,45,Weather Extremes,neutral,male,not aggressive,South Carolina,-1.3762295239921507,-0.09101040838750254
+2014,46,Weather Extremes,neutral,male,not aggressive,South Dakota,-1.9804617194059404,-0.09453059740840888
+2014,47,Weather Extremes,believer,male,not aggressive,Tennessee,-1.8815952350612246,-0.07810693025569365
+2014,48,Weather Extremes,believer,male,not aggressive,Texas,-0.9158801481243314,-0.11401387245815905
+2014,49,Weather Extremes,believer,male,not aggressive,Utah,1.65050699391939,-0.0657117374677063
+2014,50,Undefined / One Word Hashtags,believer,male,aggressive,Vermont,0.2812021063037206,-0.0908689840634458
+2014,51,Donald Trump versus Science,denier,female,not aggressive,Virginia,-0.4271288839389651,-0.11802387076382434
+2014,53,Weather Extremes,believer,male,not aggressive,Washington,1.4563361224662978,-0.06764267126344063
+2014,54,Donald Trump versus Science,denier,female,aggressive,West Virginia,0.12534393673825503,-0.11567983396788224
+2014,55,Weather Extremes,believer,male,not aggressive,Wisconsin,-2.358528213900692,-0.07058405284069837
+2014,56,Weather Extremes,believer,male,not aggressive,Wyoming,-1.0542875071006943,-0.15148340248489142
+2015,01,Global stance,believer,male,not aggressive,Alabama,2.1053960745354865,-0.062421702894427784
+2015,04,Global stance,believer,male,not aggressive,Arizona,0.5885076597319692,-0.03771579737853854
+2015,05,Weather Extremes,believer,male,not aggressive,Arkansas,2.1930498913300354,-0.07067353496000146
+2015,06,Global stance,believer,male,not aggressive,California,1.1672230077265624,0.020865431081305754
+2015,08,Global stance,believer,male,not aggressive,Colorado,1.392346974397801,-0.0034152703789941297
+2015,09,Global stance,believer,male,not aggressive,Connecticut,1.4632943496648128,0.010033571557442243
+2015,10,Global stance,believer,male,not aggressive,Delaware,1.7059015474545454,0.013895363055743737
+2015,11,Global stance,believer,male,not aggressive,,1.5283190322627722,0.0469047163559468
+2015,12,Global stance,believer,male,not aggressive,Florida,1.795301606426736,-0.04269684324469056
+2015,13,Global stance,believer,male,not aggressive,Georgia,2.448434943093532,-0.036092359315945385
+2015,16,Undefined / One Word Hashtags,believer,male,aggressive,Idaho,0.7480910430537313,0.2738332453240219
+2015,17,Global stance,believer,male,not aggressive,Illinois,2.223732003189926,-0.004819976345603014
+2015,18,Weather Extremes,believer,male,not aggressive,Indiana,2.053867922397109,-0.04306734258727891
+2015,19,Global stance,believer,male,not aggressive,Iowa,1.8542421157996103,-0.009233782008855078
+2015,20,Global stance,believer,male,not aggressive,Kansas,1.9822157876622113,-0.06041408763537981
+2015,21,Weather Extremes,believer,male,not aggressive,Kentucky,1.9770204199410433,-0.03277138659656503
+2015,22,Global stance,believer,male,not aggressive,Louisiana,1.7012844578676354,-0.058487625506626825
+2015,23,Global stance,believer,male,not aggressive,Maine,0.8810698922679425,0.022346548186499168
+2015,24,Global stance,believer,male,not aggressive,Maryland,1.4917588759519453,-0.014278811688454235
+2015,25,Global stance,believer,male,not aggressive,Massachusetts,1.2467008079792374,0.05617220374490102
+2015,26,Global stance,believer,male,not aggressive,Michigan,1.4082853065285588,4.214224860931621e-05
+2015,27,Global stance,believer,male,not aggressive,Minnesota,2.2511625448741466,0.02324956293398642
+2015,28,Global stance,believer,male,not aggressive,Mississippi,1.8203695662472272,-0.08341439176506892
+2015,29,Global stance,believer,male,not aggressive,Missouri,1.9271915410887466,-0.022639168742514856
+2015,30,Global stance,believer,male,not aggressive,Montana,2.1954764111100857,0.003582724256067718
+2015,31,Global stance,believer,male,not aggressive,Nebraska,1.5645063504668275,0.0051344095775308594
+2015,32,Global stance,believer,male,not aggressive,Nevada,1.2113425077186628,-0.09003711965103374
+2015,33,Global stance,believer,male,not aggressive,New Hampshire,1.4421069039933774,0.024958481926042553
+2015,34,Global stance,believer,male,not aggressive,New Jersey,2.384394456413703,-0.04077480757949573
+2015,35,Global stance,believer,male,not aggressive,New Mexico,0.8440373041974628,0.050654548379939414
+2015,36,Global stance,believer,male,not aggressive,New York,1.8621638557976588,0.030362996591314906
+2015,37,Global stance,believer,male,not aggressive,North Carolina,2.3947556039603644,0.004474070005627149
+2015,38,Weather Extremes,believer,male,not aggressive,North Dakota,2.1516146735585586,-0.043568602571535095
+2015,39,Weather Extremes,believer,male,not aggressive,Ohio,2.238803204334058,-0.022755954270351042
+2015,40,Global stance,believer,male,not aggressive,Oklahoma,1.3652097046162202,-0.014370406103461119
+2015,41,Global stance,believer,male,not aggressive,Oregon,2.045715864823667,0.02404939124988512
+2015,42,Global stance,believer,male,not aggressive,Pennsylvania,2.002973185664149,-0.006486210298764531
+2015,44,Undefined / One Word Hashtags,believer,male,not aggressive,Rhode Island,1.784380744981395,0.1796815427712702
+2015,45,Global stance,believer,male,not aggressive,South Carolina,2.5139703718795596,-0.053419125570612506
+2015,46,Global stance,believer,male,not aggressive,South Dakota,2.3658912280165287,-0.06185804971022044
+2015,47,Global stance,believer,male,not aggressive,Tennessee,2.1234356916191657,0.014451269331582653
+2015,48,Global stance,believer,male,not aggressive,Texas,1.2453730827493548,-0.05010741357408632
+2015,49,Global stance,believer,male,not aggressive,Utah,1.9261165135556577,0.00036613044283063896
+2015,50,Global stance,believer,male,not aggressive,Vermont,1.396583107952901,-0.04302184504437095
+2015,51,Global stance,believer,male,not aggressive,Virginia,2.0373985074877683,-0.0016377283449091123
+2015,53,Global stance,believer,male,not aggressive,Washington,1.9905010230756321,0.014452662409720096
+2015,54,Global stance,believer,male,not aggressive,West Virginia,2.180961832020886,-0.03314938639677599
+2015,55,Global stance,believer,male,not aggressive,Wisconsin,1.6668807398795507,-0.03239366148115381
+2015,56,Global stance,believer,male,not aggressive,Wyoming,1.4536585798225354,-0.08202232260308509
+2016,01,Global stance,believer,male,not aggressive,Alabama,2.1469495083348242,-0.006527242964191138
+2016,04,Global stance,believer,male,not aggressive,Arizona,0.9764196911432563,0.005238840839711575
+2016,05,Global stance,believer,male,not aggressive,Arkansas,1.9635568234636491,-0.054329719297556124
+2016,06,Global stance,believer,male,not aggressive,California,0.9846526959597179,0.047076916668617144
+2016,08,Global stance,believer,male,not aggressive,Colorado,1.2005949203227113,0.03568993233254675
+2016,09,Global stance,believer,male,not aggressive,Connecticut,1.621100529359732,0.021352890966306614
+2016,10,Global stance,believer,male,not aggressive,Delaware,1.37294513010099,-0.010491065319953625
+2016,11,Global stance,believer,male,not aggressive,,1.4748826419435437,0.07349148301445349
+2016,12,Global stance,believer,male,not aggressive,Florida,0.8911799304715299,-0.0187395836949731
+2016,13,Global stance,believer,male,not aggressive,Georgia,2.0460822177998192,-0.01579925861400417
+2016,16,Undefined / One Word Hashtags,believer,male,aggressive,Idaho,1.981881676871637,0.2931063866082186
+2016,17,Global stance,believer,male,not aggressive,Illinois,2.1451010432923026,0.03489273767979129
+2016,18,Global stance,believer,male,not aggressive,Indiana,2.0702594098071563,-0.007201937186767992
+2016,19,Global stance,believer,male,not aggressive,Iowa,2.102089106277762,-0.005347505841887869
+2016,20,Global stance,believer,male,not aggressive,Kansas,2.18689768580037,-0.009405678130962443
+2016,21,Weather Extremes,believer,male,not aggressive,Kentucky,2.471317141132863,0.006976782357928804
+2016,22,Global stance,believer,male,not aggressive,Louisiana,1.6099052229213442,-0.03140549066829969
+2016,23,Global stance,believer,male,not aggressive,Maine,1.6241264506805084,0.06621077141205003
+2016,24,Global stance,believer,male,not aggressive,Maryland,1.5236471351908467,0.06694069108278418
+2016,25,Global stance,believer,male,not aggressive,Massachusetts,1.8242396995019374,0.0791319816541002
+2016,26,Global stance,believer,male,not aggressive,Michigan,2.0036014244780103,-0.013333785214823823
+2016,27,Global stance,believer,male,not aggressive,Minnesota,1.8263234640012809,0.0318266929822626
+2016,28,Global stance,believer,male,not aggressive,Mississippi,1.963645814611328,-0.05642111899893169
+2016,29,Global stance,believer,male,not aggressive,Missouri,2.16589980674392,0.0021341467922186223
+2016,30,Global stance,believer,male,not aggressive,Montana,1.418207384303942,0.040183627960314466
+2016,31,Global stance,believer,male,not aggressive,Nebraska,2.147502914462725,0.017999623439449428
+2016,32,Global stance,believer,male,not aggressive,Nevada,1.0259867946770524,-0.04229708919249201
+2016,33,Global stance,believer,male,not aggressive,New Hampshire,1.9495909603920654,0.040430129653261586
+2016,34,Global stance,believer,female,not aggressive,New Jersey,1.5550208845567552,-0.02525826218870155
+2016,35,Global stance,believer,male,not aggressive,New Mexico,0.9617880781463068,0.04190104366751763
+2016,36,Global stance,believer,male,not aggressive,New York,1.8086399603201149,0.05411661860348451
+2016,37,Global stance,believer,male,not aggressive,North Carolina,1.8523394500595185,0.01493456086488429
+2016,38,Global stance,believer,male,not aggressive,North Dakota,2.0063566414475806,-0.05701041501127299
+2016,39,Global stance,believer,male,not aggressive,Ohio,2.232909219897487,0.008717823243173582
+2016,40,Global stance,believer,male,not aggressive,Oklahoma,1.8886432924638037,-0.024957175467986224
+2016,41,Global stance,believer,male,not aggressive,Oregon,1.1045698328951414,0.06771008831991313
+2016,42,Global stance,believer,male,not aggressive,Pennsylvania,1.7154201577526402,0.018981447964076265
+2016,44,Global stance,believer,male,not aggressive,Rhode Island,1.7254096350965,0.08857933450484139
+2016,45,Global stance,believer,male,not aggressive,South Carolina,1.5009914528963963,-0.038937662223029565
+2016,46,Weather Extremes,believer,male,not aggressive,South Dakota,0.9221890279866667,0.017374232467479506
+2016,47,Global stance,believer,male,not aggressive,Tennessee,1.9527281881048644,0.02198591201709031
+2016,48,Global stance,believer,male,not aggressive,Texas,1.5524876049633602,-0.020801299872678803
+2016,49,Global stance,believer,male,not aggressive,Utah,1.058438335929632,0.01370608972640675
+2016,50,Global stance,believer,male,not aggressive,Vermont,1.6342671935592357,0.030390347475396887
+2016,51,Global stance,believer,male,not aggressive,Virginia,1.5897894274905966,0.025141975295181165
+2016,53,Global stance,believer,male,not aggressive,Washington,1.1492151342408248,0.047264326211932745
+2016,54,Global stance,believer,male,not aggressive,West Virginia,1.6413141106016427,-0.01676208080966164
+2016,55,Global stance,believer,male,not aggressive,Wisconsin,1.8285227055600979,0.001043599994470949
+2016,56,Global stance,believer,male,not aggressive,Wyoming,1.5310701521863355,-0.07740590257070835
+2017,01,Weather Extremes,believer,male,not aggressive,Alabama,0.44056873806958885,-0.09393858276256717
+2017,04,Weather Extremes,believer,male,not aggressive,Arizona,2.481068102201458,-0.08014422054343467
+2017,05,Weather Extremes,believer,male,not aggressive,Arkansas,0.7385267546281945,-0.08888323132079239
+2017,06,Global stance,believer,male,not aggressive,California,1.732475160731694,-0.041293757224866674
+2017,08,Global stance,believer,male,not aggressive,Colorado,1.912906253230794,-0.021162148156665166
+2017,09,Global stance,believer,male,not aggressive,Connecticut,-0.10821877629773999,-0.04943816233090553
+2017,10,Weather Extremes,believer,male,not aggressive,Delaware,-0.3953950615890432,-0.08076142588196808
+2017,11,Global stance,believer,male,not aggressive,,0.8193301903149844,0.03131437985863448
+2017,12,Weather Extremes,believer,female,not aggressive,Florida,0.7532522982721102,-0.006173262537088155
+2017,13,Weather Extremes,believer,male,not aggressive,Georgia,0.9358904982415638,-0.051674837605176334
+2017,16,Politics,believer,male,aggressive,Idaho,0.7049188814080806,-0.030089207160636636
+2017,17,Weather Extremes,believer,male,not aggressive,Illinois,0.7480728164611874,-0.0462324467498546
+2017,18,Weather Extremes,believer,male,not aggressive,Indiana,0.41385703955548614,-0.048992594829693606
+2017,19,Weather Extremes,believer,male,not aggressive,Iowa,1.0248423899117447,-0.07315084725847187
+2017,20,Weather Extremes,believer,male,not aggressive,Kansas,0.9854235757763113,-0.07301446234519215
+2017,21,Weather Extremes,believer,male,not aggressive,Kentucky,-0.006871530449758705,-0.0955810627600261
+2017,22,Weather Extremes,believer,male,not aggressive,Louisiana,0.3514750831513415,-0.054408311279768334
+2017,23,Global stance,believer,male,not aggressive,Maine,-0.4477086688897531,-0.03301912833216202
+2017,24,Global stance,believer,male,not aggressive,Maryland,0.22254739798334158,-0.04894382531054572
+2017,25,Global stance,believer,male,not aggressive,Massachusetts,0.18114104038935885,0.019798895483486907
+2017,26,Weather Extremes,believer,male,not aggressive,Michigan,0.4376462841070764,-0.087276626889455
+2017,27,Global stance,believer,male,not aggressive,Minnesota,0.27620116444652826,-0.027756341138832668
+2017,28,Weather Extremes,believer,male,not aggressive,Mississippi,0.33060609736929075,-0.09094988340197943
+2017,29,Weather Extremes,believer,male,not aggressive,Missouri,0.8608910488966691,-0.08096711313919058
+2017,30,Global stance,believer,male,not aggressive,Montana,-0.14533612323444076,-0.03542861234719576
+2017,31,Weather Extremes,believer,male,not aggressive,Nebraska,0.6764327045831268,-0.0494255855184674
+2017,32,Weather Extremes,believer,male,not aggressive,Nevada,1.5659106727034497,-0.08653793664755198
+2017,33,Global stance,believer,male,not aggressive,New Hampshire,-0.16822322577737855,-0.03390091433055934
+2017,34,Global stance,believer,male,not aggressive,New Jersey,-0.05040561271913208,-0.06616957476224841
+2017,35,Global stance,believer,male,not aggressive,New Mexico,1.8055172565824995,-0.04630011787568271
+2017,36,Global stance,believer,male,not aggressive,New York,0.31284941260052074,-0.010881571474322603
+2017,37,Weather Extremes,believer,male,not aggressive,North Carolina,0.3689846059737602,-0.04983163223716565
+2017,38,Weather Extremes,believer,male,not aggressive,North Dakota,-0.4540515124826498,-0.07719977499952517
+2017,39,Weather Extremes,believer,male,not aggressive,Ohio,0.13212575071866317,-0.08112980676779429
+2017,40,Weather Extremes,believer,male,not aggressive,Oklahoma,0.924902994837999,-0.0849823764945769
+2017,41,Global stance,believer,male,not aggressive,Oregon,0.5091053761530505,-0.018759119274577938
+2017,42,Weather Extremes,believer,male,not aggressive,Pennsylvania,-0.09207485292763533,-0.07016750655026399
+2017,44,Global stance,believer,male,not aggressive,Rhode Island,0.42833366410429446,-0.008337051792782891
+2017,45,Weather Extremes,believer,male,not aggressive,South Carolina,0.4148349625753502,-0.10156781467397649
+2017,46,Global stance,believer,male,not aggressive,South Dakota,0.3663567246402714,0.00648212598634545
+2017,47,Global stance,believer,male,not aggressive,Tennessee,0.4571453767165454,-0.05763529675331008
+2017,48,Weather Extremes,believer,male,not aggressive,Texas,0.618874619963827,-0.08040969211537566
+2017,49,Global stance,believer,male,not aggressive,Utah,1.570142134305217,-0.0031341938630666745
+2017,50,Global stance,believer,male,not aggressive,Vermont,-0.060379773128530476,0.0033908467362779994
+2017,51,Global stance,believer,male,not aggressive,Virginia,0.22474384946209341,-0.04480594226357459
+2017,53,Global stance,believer,male,not aggressive,Washington,0.503810333377416,-0.027128475414574502
+2017,54,Weather Extremes,believer,male,not aggressive,West Virginia,-0.22801495606414224,-0.09211278838329462
+2017,55,Weather Extremes,believer,male,not aggressive,Wisconsin,0.6291799234157743,-0.060477341381367074
+2017,56,Global stance,believer,male,not aggressive,Wyoming,1.1723136894727273,-0.019331184132711787
+2018,01,Global stance,believer,male,not aggressive,Alabama,1.5434079228914304,-0.07421982133552206
+2018,04,Global stance,believer,male,not aggressive,Arizona,1.2973921532386434,-0.06406606105713596
+2018,05,Global stance,believer,male,not aggressive,Arkansas,2.418133305846374,-0.09723390879806723
+2018,06,Global stance,believer,male,not aggressive,California,-1.2527000154790582,-0.01298558840870598
+2018,08,Global stance,believer,male,not aggressive,Colorado,2.2121087532866026,-0.015440994684038862
+2018,09,Global stance,believer,male,not aggressive,Connecticut,0.626355665956821,-0.01763471724010826
+2018,10,Global stance,believer,male,not aggressive,Delaware,1.5508871252366703,-0.05701673375417362
+2018,11,Global stance,believer,male,not aggressive,,2.287649600962406,0.05091374928442108
+2018,12,Global stance,believer,male,not aggressive,Florida,0.4216849345635805,-0.010144656300386093
+2018,13,Global stance,believer,male,not aggressive,Georgia,1.5502756931549844,-0.04760603263897134
+2018,16,Global stance,believer,male,not aggressive,Idaho,0.12038325903668338,-0.06451702563703918
+2018,17,Global stance,believer,male,not aggressive,Illinois,3.6361547861890617,-0.04885158866499993
+2018,18,Global stance,believer,male,not aggressive,Indiana,3.2671907649591407,-0.05026271689322715
+2018,19,Global stance,believer,male,not aggressive,Iowa,2.3923351383900227,-0.06601480003466685
+2018,20,Global stance,believer,male,not aggressive,Kansas,2.3532198367487203,-0.055750065097039954
+2018,21,Global stance,believer,male,not aggressive,Kentucky,2.60014003458204,-0.09247104445788484
+2018,22,Global stance,believer,male,not aggressive,Louisiana,1.8232484490636909,-0.057962592963057884
+2018,23,Global stance,believer,male,not aggressive,Maine,2.2941999503192396,-0.022553289710391684
+2018,24,Global stance,believer,male,not aggressive,Maryland,1.83819575045031,-0.030261018741302863
+2018,25,Global stance,believer,male,not aggressive,Massachusetts,1.511210910425216,0.036784449381275584
+2018,26,Global stance,believer,male,not aggressive,Michigan,4.740480369120482,-0.056025114884056364
+2018,27,Global stance,believer,male,not aggressive,Minnesota,1.6569787174249277,-0.013371158154908368
+2018,28,Global stance,believer,male,not aggressive,Mississippi,1.8808033498938217,-0.08819876347725032
+2018,29,Global stance,believer,male,not aggressive,Missouri,2.7269327515799326,-0.07407734058207949
+2018,30,Global stance,believer,male,not aggressive,Montana,0.5964423941670384,-0.0032555242981524976
+2018,31,Global stance,believer,male,not aggressive,Nebraska,2.0471219194875068,-0.02267415723190902
+2018,32,Global stance,believer,male,not aggressive,Nevada,0.8226406123955329,-0.07633657186352871
+2018,33,Global stance,believer,male,not aggressive,New Hampshire,1.8654581218039026,-0.012157603750171496
+2018,34,Global stance,believer,male,not aggressive,New Jersey,0.8830146435234411,-0.025597319758763504
+2018,35,Global stance,believer,male,not aggressive,New Mexico,2.263225015502261,-0.02760912978943798
+2018,36,Global stance,believer,male,not aggressive,New York,1.2468402032435242,0.0060380557307230225
+2018,37,Global stance,believer,male,not aggressive,North Carolina,2.129984547927005,-0.02287463180847851
+2018,38,Global stance,believer,male,not aggressive,North Dakota,1.753759062479649,-0.09150290460620564
+2018,39,Global stance,believer,male,not aggressive,Ohio,4.0780460781429655,-0.061797629280838505
+2018,40,Global stance,believer,male,not aggressive,Oklahoma,2.5395898000537387,-0.07372790235853327
+2018,41,Global stance,believer,male,not aggressive,Oregon,-1.4386022231010636,-0.009594446908918707
+2018,42,Global stance,believer,male,not aggressive,Pennsylvania,2.2302465973122105,-0.03816826092234623
+2018,44,Global stance,believer,male,not aggressive,Rhode Island,0.5656122148639873,-0.0040249924536289545
+2018,45,Global stance,believer,male,not aggressive,South Carolina,1.5261558269800157,-0.08032896560465291
+2018,46,Global stance,believer,male,not aggressive,South Dakota,1.8745549398158527,-0.04729883522095444
+2018,47,Global stance,believer,male,not aggressive,Tennessee,2.1976117956457952,-0.04213989540831389
+2018,48,Global stance,believer,male,not aggressive,Texas,2.315740158704384,-0.06150091331573916
+2018,49,Global stance,believer,male,not aggressive,Utah,2.165087639851925,0.015104964172435476
+2018,50,Global stance,believer,male,not aggressive,Vermont,3.069891674761703,0.013268252096712169
+2018,51,Global stance,believer,male,not aggressive,Virginia,2.427370453302306,-0.0215650509967833
+2018,53,Global stance,believer,male,not aggressive,Washington,-1.1341498882447958,-0.00791504284060434
+2018,54,Global stance,believer,male,not aggressive,West Virginia,3.34587563834594,-0.08005614851599735
+2018,55,Global stance,believer,male,not aggressive,Wisconsin,2.859257815811469,-0.04078057951320665
+2018,56,Global stance,believer,female,not aggressive,Wyoming,1.922078697314225,0.03487678835638929
+2019,01,Global stance,believer,male,not aggressive,Alabama,2.4677916874590164,-0.10808675104310472
+2019,04,Global stance,believer,male,not aggressive,Arizona,0.7535485376791679,-0.10288690709627187
+2019,05,Global stance,believer,male,not aggressive,Arkansas,4.77021770810992,-0.1384819337036293
+2019,06,Global stance,believer,male,not aggressive,California,-2.6383361718735716,-0.07152978794514296
+2019,08,Global stance,believer,male,not aggressive,Colorado,2.691238818524333,-0.03960744702666971
+2019,09,Global stance,believer,male,not aggressive,Connecticut,0.9364453130859376,-0.051709963526188785
+2019,10,Global stance,believer,male,not aggressive,Delaware,2.338158811531191,-0.10670179418916581
+2019,11,Global stance,believer,male,not aggressive,,3.858131795966709,0.04267721397862673
+2019,12,Global stance,believer,male,not aggressive,Florida,0.5380391439255304,-0.09580767329775382
+2019,13,Global stance,believer,male,not aggressive,Georgia,2.4832251122507123,-0.10489403625982457
+2019,16,Global stance,believer,male,not aggressive,Idaho,-1.0115267846524063,-0.07896095144520239
+2019,17,Global stance,believer,male,not aggressive,Illinois,6.426882840146162,-0.08344597810500358
+2019,18,Global stance,believer,male,not aggressive,Indiana,5.90753751368736,-0.11325786891875336
+2019,19,Global stance,believer,male,not aggressive,Iowa,5.1228031742661075,-0.11429967385363149
+2019,20,Global stance,believer,male,not aggressive,Kansas,3.992898660140916,-0.07337854772191257
+2019,21,Global stance,believer,male,not aggressive,Kentucky,4.520126761860795,-0.12178594886635902
+2019,22,Global stance,believer,male,not aggressive,Louisiana,2.9293243186091686,-0.11295267960087113
+2019,23,Global stance,believer,male,not aggressive,Maine,3.459876810958231,-0.041864732628539285
+2019,24,Global stance,believer,male,not aggressive,Maryland,3.024450662048568,-0.03840167588494556
+2019,25,Global stance,believer,male,not aggressive,Massachusetts,2.2212622261823536,0.0050255868963757135
+2019,26,Global stance,believer,male,not aggressive,Michigan,7.947442375266412,-0.10312683770531393
+2019,27,Global stance,believer,male,not aggressive,Minnesota,3.8865947173157385,-0.04659734233285919
+2019,28,Global stance,believer,male,not aggressive,Mississippi,3.3372524982723575,-0.15131323699935198
+2019,29,Global stance,believer,male,not aggressive,Missouri,4.801188846541818,-0.09902068667388846
+2019,30,Global stance,believer,male,not aggressive,Montana,1.174642812252322,-0.051110782129805146
+2019,31,Global stance,believer,male,not aggressive,Nebraska,4.408256137965616,-0.07304662831005565
+2019,32,Global stance,believer,male,not aggressive,Nevada,0.4242516743312986,-0.13464089834547754
+2019,33,Global stance,believer,male,not aggressive,New Hampshire,2.860200239243028,-0.03405633115403304
+2019,34,Global stance,believer,male,not aggressive,New Jersey,1.4974199226696296,-0.06938541277356944
+2019,35,Global stance,believer,male,not aggressive,New Mexico,2.582149572442681,-0.0798063495084373
+2019,36,Global stance,believer,male,not aggressive,New York,2.0696140818629885,-0.024722843265992844
+2019,37,Global stance,believer,male,not aggressive,North Carolina,3.631020089248651,-0.048372277628355956
+2019,38,Global stance,believer,male,not aggressive,North Dakota,3.8446488466666673,-0.08497008354524832
+2019,39,Global stance,believer,male,not aggressive,Ohio,7.118424702942463,-0.12584163995098563
+2019,40,Global stance,believer,male,not aggressive,Oklahoma,4.334123926926407,-0.12197243627305271
+2019,41,Global stance,believer,male,not aggressive,Oregon,-2.984258909639441,-0.012638423313759337
+2019,42,Global stance,believer,male,not aggressive,Pennsylvania,3.7872832855334053,-0.07055608289556084
+2019,44,Global stance,believer,male,not aggressive,Rhode Island,0.7707795977272728,-0.007701284531440569
+2019,45,Global stance,believer,male,not aggressive,South Carolina,2.673698667297888,-0.11749338290657967
+2019,46,Global stance,believer,male,not aggressive,South Dakota,4.398234060051546,-0.07910274777294582
+2019,47,Global stance,believer,male,not aggressive,Tennessee,3.8019365072752955,-0.0804029796100551
+2019,48,Global stance,believer,male,not aggressive,Texas,3.716855992572344,-0.11548844103395836
+2019,49,Global stance,believer,male,not aggressive,Utah,2.4726473989390967,-0.04560443034711503
+2019,50,Global stance,believer,male,not aggressive,Vermont,5.021939436620795,-0.00501667328290565
+2019,51,Global stance,believer,male,not aggressive,Virginia,4.115876186550251,-0.0505489907678426
+2019,53,Global stance,believer,male,not aggressive,Washington,-2.3182333598744176,-0.030084808545013175
+2019,54,Global stance,believer,male,not aggressive,West Virginia,5.761240209370694,-0.1119700070791299
+2019,55,Global stance,believer,male,not aggressive,Wisconsin,5.4619634060444255,-0.04993731927710826
+2019,56,Global stance,believer,male,not aggressive,Wyoming,3.4043195247771836,-0.06492237964645843
+>>>>>>> bc06aaed5c454907329d41773140189e868d50c8

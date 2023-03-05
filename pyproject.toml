@@ -8,6 +8,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 pandas = "^1.5.3"
+<<<<<<< HEAD
+=======
+dash = "^2.8.1"
+>>>>>>> bc06aaed5c454907329d41773140189e868d50c8
 
 
 [build-system]
