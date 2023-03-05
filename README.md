@@ -15,7 +15,7 @@ Even though the more extreme weather events have been happening more frequently 
 
 ## Data sources
 1. Climate Change Twitter Dataset: https://doi.org/10.1016/j.eswa.2022.117541 
-2. Federal Emergency Management Agency Disaster Events Data: https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2
+2. Federal Emergency Management Agency Disaster Events Data (API): https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2
 3. Twitter Developer Platform (API): https://developer.twitter.com/en/portal/dashboard
 
 ## Getting Started
