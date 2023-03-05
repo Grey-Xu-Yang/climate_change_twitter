@@ -6,6 +6,20 @@
 ## Description
 Even though the more extreme weather events have been happening more frequently globally, there is still a portion of the population who are unaware that their lives are being impacted by climate change or are ignorant of the magnitude and reality of the issue. Thus, we analyze climate change patterns to determine people's sentiments and understanding of climate change. We correlate people's awareness with the intensity of weather diaster's impact in their area of residence. The data set we plan to use is a twitter collections dataset regarding climate change and human opinions. We also find additional third party API on extreme weather events to merge with the twitter data. For the result, we will visualize our analysis on spatial distribution of people's sentiment toward climate change as well as the through the dashboard. This multi-faceted analysis will help us gain a comprehensive understanding of people's sentiments and awareness towards climate change, which can help inform effective climate change communication strategies.
 
+## Built with
+- Python
+Plotly
+Dash/Cytoscape
+Networkx
+Pyvis.network
+HTML/CSS
+Data sources
+WTO Merchandise trade values annual dataset : overall trade volume in product details (SITC)
+IMF Direction of Trade Statistics (DOTS) : trade flows for worldwide countries
+UN Comtrade : trade flows between top30 countries in product details (HS code)
+Our World in Data Covid-19 data : covid death/cases and stringent index
+World Bank World Development Indicators : gdp, inflation, exchange rate
+Country code : map alpha 2/3 codes to country name
 ## Getting Started
 To get started with the App, follow these steps:
 
