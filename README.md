@@ -15,6 +15,7 @@ To get started with Awesome App, follow these steps:
 4. Run python -m main to open the dashboard
 5. Due to the constraint of file size, to access the large dataset, click the following google drive to download the twitter dataset:
 https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sharing
+6. Move twitter.csv into the subdirectory called "sources". Run the code.
 
 ## Analysis Map Road
 Firstly, we will visualize the average sentiment across the United States from 2009 to 2019 using the Twitter collections dataset. This analysis will help us understand how people's sentiment towards climate change has evolved over time in different parts of the country. 
