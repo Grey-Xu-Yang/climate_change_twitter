@@ -28,7 +28,7 @@ Lastly, we plan to conduct a regression analysis on sentiment change using an in
 
 
 ## Demo on Visualization
-#### Word Cloud Comparison
+### Word Cloud Comparison
 <p align="center">
 <img src="/main/images/wordcloud_Fire_2019.png">
 </p>
