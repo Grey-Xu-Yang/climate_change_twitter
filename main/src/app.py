@@ -156,13 +156,12 @@ app.layout = dbc.Container([
         dbc.Col([
             html.Div([
                 html.H3("Comparison Of Tweets Sentiment in Relation to Disaster Event Declaration"),
-                html.P("""
-                The word cloud provides a visual representation of the most salient "
+                html.P(
+                "The word cloud provides a visual representation of the most salient "
                 "and frequently used terms related to climate change on Twitter over time. " 
                 "This can be a useful tool for understanding public discourse around climate "
                 "change and identifying trends and shifts in language and rhetoric."
-                """),
-
+                ),
                 dcc.Dropdown(
                     options=[
                         {'label': 'Before', 'value': 'before'},
@@ -170,7 +169,7 @@ app.layout = dbc.Container([
                         {'label': 'Before and After', 'value': 'before and after'}
                     ],
                     value='Words',
-                    id='wordcloud-dropdown',
+                    id='disaster-dropdown',
                     style={'width': '100%'}
                 ),
             ]),
@@ -179,24 +178,14 @@ app.layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H3("2009", style={'textAlign': 'center'}),
             html.Img(
-                style={'width': '100%', 'display': 'inline-block'},
+                style={'width': '75%', 'display': 'inline-block'},
                 id = "disaster_sentiment",
-                title = "2009"
+                title = "Scatter Plot for Disaster Event Declaration"
             )
         ], width=10, align = "center"),
     ]),
-    dbc.Row([
-        dbc.Col([
-            html.H3("2009", style={'textAlign': 'center'}),
-            html.Img(
-                style={'width': '100%', 'display': 'inline-block'},
-                id = "disaster_sentiment",
-                title = "2009"
-            )
-        ], width=10, align = "center"),
-    ]),
+
     dbc.Row(
         dbc.Col(
             [
@@ -280,7 +269,7 @@ def display_wordclouds_2019(stance):
 
 @app.callback(
     Output(component_id = "disaster_sentiment", component_property = "src"),
-    Input(component_id = "wordcloud-dropdown", component_property = "value")
+    Input(component_id = "disaster-dropdown", component_property = "value")
 )
 def display_wordclouds_2019(stance):
     """
@@ -294,7 +283,7 @@ def display_wordclouds_2019(stance):
     elif stance == "before":
         image_path = "./main/images/Average Sentiment of Tweets Before a Disaster Declaration.png"
     else:
-        image_path = "./main/images/Average Sentiment of Tweets Before & After a Disaster Declaration.png"
+        image_path = "./main/images/Average Sentiments Before & After a Disaster Declaration.png"
 
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
