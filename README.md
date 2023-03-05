@@ -29,6 +29,8 @@ This multi-faceted analysis will help us gain a comprehensive understanding of p
 #### Word Cloud Comparison
 ![Alt text](./main/images/wordcloud_Fire_2019.png)
 
+### Interactive Sentiment Map
+![Alt text](./main/images/map_demo.png)
 
 ## Authors
 Jonathan Juarez
