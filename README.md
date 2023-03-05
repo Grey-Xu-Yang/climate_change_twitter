@@ -24,7 +24,7 @@ Firstly, we will visualize the average sentiment across the United States from 2
 
 Secondly, we will create a word cloud for the most frequent words used in tweets related to climate change in 2009 compared to 2019. This analysis will help us understand how the public's vocabulary and attention towards climate change have evolved over the past decade. 
 
-Lastly, we plan to conduct a regression analysis on sentiment change using an indicator of weather data. We will merge third-party API data on extreme weather events with the Twitter collections dataset to understand the correlation between climate change's impact in an area and people's sentiment towards the issue. We will focus our scope on studying the U.S. 
+Lastly, we plan to conduct a regression analysis on sentiment change using an indicator of weather data. We will merge third-party API data from FEMA (Federal Emergency Management Agency) on extreme weather events with the Twitter collections dataset to understand the correlation between climate change's impact in an area and people's sentiment towards the issue. We will focus our scope on studying the U.S. 
 
 This multi-faceted analysis will help us gain a comprehensive understanding of people's sentiments and awareness towards climate change, which can help inform effective climate change communication strategies.
 
