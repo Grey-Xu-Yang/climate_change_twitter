@@ -31,7 +31,7 @@ file_path = './main/sources/US_twitter.csv'
 US_twitter.to_csv(file_path, index=False) 
 
 # Load data into a Pandas DataFrame
-file_path = "./main/sources/cb_2018_us_county_500k.shp"
+file_path = "./main/sources/county_shape/cb_2018_us_county_500k.shp"
 # Convert latitude and longitude values to Point objects
 geometry = [Point(xy) for xy in zip(US_twitter['lng'], US_twitter['lat'])]
 # Create a GeoDataFrame from the DataFrame and Point objects
@@ -101,7 +101,7 @@ result_df = grouped_df.agg(agg_dict)
 result_df = result_df.reset_index()
 
 # If the twitter has the same county ID with the FEMA data, and the twitter release date falls into the 
-# range of starting date and ending date of the event
+# range of starting date and ending date of the eventll
 df_disasters['declarationDate'] = pd.to_datetime(df_disasters['declarationDate']).dt.date
 df_disasters['incidentBeginDate'] = pd.to_datetime(df_disasters['incidentBeginDate']).dt.date
 df_disasters['incidentEndDate'] = pd.to_datetime(df_disasters['incidentEndDate']).dt.date
