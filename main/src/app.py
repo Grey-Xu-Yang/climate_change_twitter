@@ -8,6 +8,7 @@ Main file for building the dashboard.
 
 Run the app with `python3 app.py` and visit
 http://127.0.0.1:8050/ in your web browser.
+
 '''
 
 import json
@@ -22,6 +23,8 @@ import plotly.graph_objects as go
 from .data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
+
+# load dataframes for the three stances
 believer_df = pd.read_csv("./main/sources/believer_twitter.csv")
 denier_df = pd.read_csv("./main/sources/denier_twitter.csv")
 neutral_df = pd.read_csv("./main/sources/neutral_twitter.csv")
@@ -31,22 +34,18 @@ final_df = pd.concat([believer_df, denier_df, neutral_df])
 with open("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/us-states.json", 'r') as f:
     geojson_file = json.load(f)
 
-# ******************************** Data cleaning ****************************** #
+# ******************************** Data cleaning ***************************** #
 
 df = add_state_column(final_df)
 
-# ------------------------- App Layout ------------------------------- #
+# --------------------------------- App Layout ------------------------------- #
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MINTY])
-
-L_FONT = "Work Sans, sans-serif"
-LT_SIZE = 16
-L_SIZE = 12
 
 app.layout = dbc.Container([
     dbc.Row(
         dbc.Col(
             [
-                html.H1("Sentiment of US states", style = {'textAlign': 'center'}),
+                html.H1("Hot or Not: An Enquiry into Climate Change Perceptions", style = {'textAlign': 'center'}),
                 html.P(
                     "Welcome to our climate sentiment analysis dashboard! Our project is dedicated"
                     " to analyzing the sentiment towards climate change across the United States."
@@ -54,7 +53,7 @@ app.layout = dbc.Container([
                     " towards climate change based on the stance of the user (Believer, Denier or Neutral." 
                     " Explore our dashboard to gain insights into how people feel about this critical issue"
                     " in different regions of the country.",
-                    style={"font-size": 16, "text-align": 'left', 'marginTop': 15}
+                    style={"font-size": 16, "text-align": 'left', 'marginTop': 15},
                 ),
             ]
         )
@@ -168,7 +167,7 @@ app.layout = dbc.Container([
 ], fluid=True)
 
 # ********************************** App callbacks *****************************
-# Callback and function for displaying the map
+# Callback for displaying the map
 @app.callback(
     Output('map-graph', 'figure'),
     [Input('stance_dropdown', 'value'),
@@ -231,6 +230,7 @@ def display_wordclouds_2019(stance):
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
     return 'data:image/png;base64,{}'.format(encoded_image.decode())
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
