@@ -24,9 +24,9 @@ To get started with Awesome App, follow these steps:
 
 ## Demo on Visulization
 #### 1. Word Cloud Comparison
-![Alt text](~/30122-project-hot-or-not/main/images/wordcloud_believer_2009.png)
+![Alt text](./30122-project-hot-or-not/main/images/wordcloud_believer_2009.png)
 
-![Alt text](~/30122-project-hot-or-not/main/images/wordcloud_denier_2009.png)
+![Alt text](./30122-project-hot-or-not/main/images/wordcloud_denier_2009.png)
 
 ## Authors
 Grey Xu 
