@@ -223,11 +223,11 @@ def display_wordclouds_2019(stance):
     
     """
     if stance == "believer":
-        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_believer_2019.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_believer_2018.png"
     elif stance == "denier":
-        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_denier_2019.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_denier_2018.png"
     else:
-        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_neutral_2019.png"
+        image_path = "/home/jaskiratk/capp30122/30122-project-hot-or-not/main/images/wordcloud_neutral_2018.png"
 
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
