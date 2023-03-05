@@ -110,39 +110,11 @@ df_disasters['incidentEndDate'] = pd.to_datetime(df_disasters['incidentEndDate']
 merged_df = pd.merge(df_disasters, result_df, left_on='fipsCountyCode', right_on = 'county_FIP')
 filtered_df = merged_df[(merged_df['date'] >= merged_df['incidentBeginDate']) & (merged_df['date'] <= merged_df['incidentEndDate'])]
 
-## Part 3.1. Merge based on both the event date and county
-# Group data by date and county
-grouped_df = US_twitter.groupby(['date', 'county_FIP'])
-
-# Define the aggregation functions for categorical and numerical variables
-# For categorical value, take the most frequently occured type, for the numerical value, take the average
-agg_dict = {'topic': lambda x: x.value_counts().index[0], 
-            'stance': lambda x: x.value_counts().index[0], 
-            'gender': lambda x: x.value_counts().index[0], 
-            'aggressiveness': lambda x: x.value_counts().index[0], 
-            'state_name': lambda x: x.iloc[0],
-            'county_name': lambda x: x.iloc[0],
-            'temperature_avg': 'mean',
-            'sentiment': 'mean',
-            'id': lambda x: list(x)}
-
-# Apply the aggregation
-result_df = grouped_df.agg(agg_dict)
-# Reset the index
-result_df = result_df.reset_index()
-
-df_disasters['declarationDate'] = pd.to_datetime(df_disasters['declarationDate']).dt.date
-df_disasters['incidentBeginDate'] = pd.to_datetime(df_disasters['incidentBeginDate']).dt.date
-df_disasters['incidentEndDate'] = pd.to_datetime(df_disasters['incidentEndDate']).dt.date
-merged_df = pd.merge(df_disasters, result_df, left_on='fipsCountyCode', right_on = 'county_FIP')
-filtered_df = merged_df[(merged_df['date'] >= merged_df['incidentBeginDate']) & (merged_df['date'] <= merged_df['incidentEndDate'])]
-
 # There is only five events that are matched.
 file_path = './main/sources/merged_date_county.csv'
 filtered_df.to_csv(file_path, index=False) 
 
 ## Part 3.2. Merge based on both the event date and the state
-# Take 3 minute to run this line
 # Group data by date and county
 grouped_df2 = US_twitter.groupby(['date', 'state_FIP'])
 
