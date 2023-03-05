@@ -26,7 +26,7 @@ To get started with Awesome App, follow these steps:
 
 ## Demo on Visulization
 #### Word Cloud Comparison
-![Alt text](./30122-project-hot-or-not/main/images/wordcloud_Fire_2019.png)
+![Alt text](./main/images/wordcloud_Fire_2019.png)
 
 
 ## Authors
