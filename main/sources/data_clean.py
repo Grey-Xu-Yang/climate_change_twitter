@@ -33,7 +33,7 @@ file_path = './main/sources/US_twitter.csv'
 US_twitter.to_csv(file_path, index=False) 
 
 # Load data into a Pandas DataFrame
-file_path = "./main/sources/county_shape/cb_2018_us_county_500k.shp"
+file_path = "./main/sources/county/cb_2018_us_county_500k.shp"
 # Convert latitude and longitude values to Point objects
 geometry = [Point(xy) for xy in zip(US_twitter['lng'], US_twitter['lat'])]
 # Create a GeoDataFrame from the DataFrame and Point objects
