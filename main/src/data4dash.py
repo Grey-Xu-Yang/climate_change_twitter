@@ -17,8 +17,6 @@ def add_state_column(df):
     Given a column of State FIPs, this function adds another column 
     for the state name corresponding to the FIP
     
-    Jaskirat
-    
     """
     fip_to_state = {
     '01': 'Alabama','02': 'Alaska','04': 'Arizona','05': 'Arkansas','06': 'California',
