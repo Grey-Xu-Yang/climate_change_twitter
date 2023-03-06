@@ -20,7 +20,7 @@ import plotly.express as px
 import pandas as pd
 import base64
 from dash.dependencies import Input, Output
-from .data4dash import add_state_column
+from .data4dash import add_state_column, extract_year_month
 import dash_bootstrap_components as dbc
 
 
@@ -34,24 +34,26 @@ final_df = pd.concat([believer_df, denier_df, neutral_df])
 with open("./main/sources/us-states.json", 'r') as f:
     geojson_file = json.load(f)
 
+# Adding state column based on state FIP
 df = add_state_column(final_df)
 
 # ****************** Data cleaning for disaster scatter plot ***************** #
 
 df_disaster = pd.read_csv('./main/sources/average_sentiments_data.csv')
 
-cols = ['declarationTitle', 'declarationDate', 'Avg_Sentiment_Before', 'Avg_Sentiment_After']
-df_plt = df_disaster.loc[:, cols]
-df2 = df_plt.sort_values(by="declarationDate", ascending=True)
-df2['Year_Month'] = df2['declarationDate'].apply(lambda x: x[:7])
+# Converting date into year and month
+df2 = extract_year_month(df_disaster)
+
 # --------------------------------- App Layout ------------------------------- #
+
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MINTY])
 
 app.layout = dbc.Container([
     dbc.Row(
         dbc.Col(
             [
-                html.H1("Hot or Not: An Enquiry into Climate Change Perceptions", style = {'textAlign': 'center', "padding-top": "70px"}),
+                html.H1("Hot or Not: An Enquiry into Climate Change Perceptions", 
+                        style = {'textAlign': 'center', "padding-top": "70px"}),
                 html.P(
                     "Welcome to our climate sentiment analysis dashboard! Our project is dedicated"
                     " to analyzing the sentiment towards climate change across the United States."

@@ -37,3 +37,11 @@ def add_state_column(df):
     df['state_name'] = df['state_FIP'].map(fip_to_state)
     
     return df
+
+def extract_year_month(dataframe):
+    cols = ['declarationTitle', 'declarationDate', 'Avg_Sentiment_Before', 'Avg_Sentiment_After']
+    df_plt = dataframe.loc[:, cols]
+    df = df_plt.sort_values(by="declarationDate", ascending=True)
+    df['Year_Month'] = df['declarationDate'].apply(lambda x: x[:7])
+    
+    return df
