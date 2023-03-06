@@ -1,4 +1,7 @@
 #source https://towardsdatascience.com/very-simple-python-script-for-extracting-most-common-words-from-a-story-1e3570d0b9d0
+
+#Code provided by Jonathan Juarez
+
 import numpy as np
 import re
 
@@ -7,6 +10,12 @@ stopwords = ["a", "an", "the", "this", "that", "of", "for", "or",
               "at", "it", "rt", "mt", "with", "n", "s", "i", "about", "are", "t"]
 
 def clean_tweet(tweet):
+    """
+    Cleans twitter tweet given a collection of characters that are not needed
+    for analysis.
+    Input (tweet): a string of text
+    Output (temp): new cleaned string
+    """
     if type(tweet) == float:
         return ""
     temp = tweet.lower()
