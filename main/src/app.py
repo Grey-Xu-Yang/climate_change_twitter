@@ -20,7 +20,7 @@ import plotly.express as px
 import pandas as pd
 import base64
 from dash.dependencies import Input, Output
-from .data4dash import add_state_column, extract_year_month
+from .utils import add_state_column, extract_year_month
 import dash_bootstrap_components as dbc
 
 
@@ -43,6 +43,8 @@ df_disaster = pd.read_csv('./main/sources/average_sentiments_data.csv')
 
 # Converting date into year and month
 df2 = extract_year_month(df_disaster)
+
+
 
 # --------------------------------- App Layout ------------------------------- #
 
