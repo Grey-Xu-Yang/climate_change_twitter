@@ -34,10 +34,16 @@ final_df = pd.concat([believer_df, denier_df, neutral_df])
 with open("./main/sources/us-states.json", 'r') as f:
     geojson_file = json.load(f)
 
-# ******************************** Data cleaning ***************************** #
-
 df = add_state_column(final_df)
 
+# ****************** Data cleaning for disaster scatter plot ***************** #
+
+df_disaster = pd.read_csv('./main/sources/average_sentiments_data.csv')
+
+cols = ['declarationTitle', 'declarationDate', 'Avg_Sentiment_Before', 'Avg_Sentiment_After']
+df_plt = df_disaster.loc[:, cols]
+df2 = df_plt.sort_values(by="declarationDate", ascending=True)
+df2['Year_Month'] = df2['declarationDate'].apply(lambda x: x[:7])
 # --------------------------------- App Layout ------------------------------- #
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MINTY])
 
@@ -113,12 +119,12 @@ app.layout = dbc.Container([
         dbc.Col([
             html.Div([
                 html.H3("Word Clouds by Stance"),
-                html.P("""
-                The word cloud provides a visual representation of the most salient "
+                html.P(
+                "The word cloud provides a visual representation of the most salient "
                 "and frequently used terms related to climate change on Twitter over time. " 
                 "This can be a useful tool for understanding public discourse around climate "
                 "change and identifying trends and shifts in language and rhetoric."
-                """),
+                ),
 
                 dcc.Dropdown(
                     options=[
@@ -152,39 +158,30 @@ app.layout = dbc.Container([
             )
         ], width=6),
     ]),
-    dbc.Row([
-        dbc.Col([
-            html.Div([
-                html.H3("Comparison Of Tweets Sentiment in Relation to Disaster Event Declaration"),
-                html.P(
-                "The word cloud provides a visual representation of the most salient "
-                "and frequently used terms related to climate change on Twitter over time. " 
-                "This can be a useful tool for understanding public discourse around climate "
-                "change and identifying trends and shifts in language and rhetoric."
-                ),
-                dcc.Dropdown(
-                    options=[
-                        {'label': 'Before', 'value': 'before'},
-                        {'label': 'After', 'value': 'after'},
-                        {'label': 'Before and After', 'value': 'before and after'}
-                    ],
-                    value='Words',
-                    id='disaster-dropdown',
-                    style={'width': '40%'}
-                ),
-            ]),
-
-        ], width=12),
-    ]),
-    dbc.Row([
-        dbc.Col([
-            html.Img(
-                style={'width': '75%', 'display': 'inline-block'},
-                id = "disaster_sentiment",
-                title = "Scatter Plot for Disaster Event Declaration"
+    dbc.Row(
+            dbc.Col(
+                html.H3("Average Sentiment of Tweets Before & After a Disaster Declaration"),
+                width={"size": 12},
             )
-        ], width=10, align = "center"),
-    ]),
+        ),
+        dbc.Row(
+            dbc.Col(
+                dcc.Graph(
+                    id="sentiment-plot", 
+                    figure=px.scatter(
+                        df2, 
+                        x="Year_Month", 
+                        y=["Avg_Sentiment_Before", "Avg_Sentiment_After"], 
+                        color_discrete_sequence=["blue", "red"], 
+                        hover_data=['declarationTitle']
+                    ).update_layout(
+                        title="Average Sentiment of Tweets Before & After a Disaster Declaration", 
+                        xaxis_title="Declaration Date", 
+                        yaxis_title="Average Sentiment"
+                    )
+                ),
+                width={"size": 12},
+            )),
 
     dbc.Row(
         dbc.Col(
@@ -236,11 +233,11 @@ def display_wordclouds_2009(stance):
     
     """
     if stance == "believer":
-        image_path = "./main/images/wordcloud_believer_2009.png"
+        image_path = "./main/images/new_wordcloud_believer_2009.png"
     elif stance == "denier":
-        image_path = "./main/images/wordcloud_denier_2009.png"
+        image_path = "./main/images/new_wordcloud_denier_2009.png"
     else:
-        image_path = "./main/images/wordcloud_neutral_2009.png"
+        image_path = "./main/images/new_wordcloud_neutral_2009.png"
        
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
@@ -257,37 +254,11 @@ def display_wordclouds_2019(stance):
     
     """
     if stance == "believer":
-        image_path = "./main/images/wordcloud_believer_2018.png"
+        image_path = "./main/images/new_wordcloud_believer_2018.png"
     elif stance == "denier":
-        image_path = "./main/images/wordcloud_denier_2018.png"
+        image_path = "./main/images/new_wordcloud_denier_2018.png"
     else:
-        image_path = "./main/images/wordcloud_neutral_2018.png"
-
-    encoded_image = base64.b64encode(open(image_path, 'rb').read())
-
-    return 'data:image/png;base64,{}'.format(encoded_image.decode())
-
-@app.callback(
-    Output(component_id = "disaster_sentiment", component_property = "src"),
-    Input(component_id = "disaster-dropdown", component_property = "value")
-)
-def display_disaster_scatterplot(timeline):
-    """
-    
-    This function displays the average sentiment of people before and after a
-    disaster event
-    
-    Inputs: "before", "after" or "before and after"
-    
-    Returns: Image
-    
-    """
-    if timeline == "after":
-        image_path = "./main/images/Average Sentiment of Tweets After a Disaster Declaration.png"
-    elif timeline == "before":
-        image_path = "./main/images/Average Sentiment of Tweets Before a Disaster Declaration.png"
-    else:
-        image_path = "./main/images/Average Sentiments Before & After a Disaster Declaration.png"
+        image_path = "./main/images/new_wordcloud_neutral_2018.png"
 
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
