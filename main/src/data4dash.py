@@ -10,7 +10,6 @@ Run the app with `python3 app.py` and visit
 http://127.0.0.1:8050/ in your web browser.
 '''
 
-
 import pandas as pd
 
 def add_state_column(df):
@@ -32,6 +31,7 @@ def add_state_column(df):
     '45': 'South Carolina','46': 'South Dakota','47': 'Tennessee','48': 'Texas','49': 'Utah','50': 'Vermont',
     '51': 'Virginia','53': 'Washington','54': 'West Virginia','55': 'Wisconsin','56': 'Wyoming'
     }
+    
     df = df.dropna()
     df['state_FIP'] = df['state_FIP'].astype(str).str.zfill(2)
     df['state_name'] = df['state_FIP'].map(fip_to_state)

@@ -8,6 +8,8 @@ Main file for building the dashboard.
 
 Run the app with `python3 app.py` and visit
 http://127.0.0.1:8050/ in your web browser.
+(takes about a minute to run)
+
 '''
 
 import json
@@ -18,36 +20,32 @@ import plotly.express as px
 import pandas as pd
 import base64
 from dash.dependencies import Input, Output
-import plotly.graph_objects as go
-
-from data4dash import add_state_column
+from .data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
-believer_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/believer/believer_twitter.csv")
-denier_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/denier_twitter.csv")
-neutral_df = pd.read_csv("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/neutral_twitter.csv")
+
+# load dataframes for the three stances
+believer_df = pd.read_csv("./main/sources/believer_twitter.csv")
+denier_df = pd.read_csv("./main/sources/denier_twitter.csv")
+neutral_df = pd.read_csv("./main/sources/neutral_twitter.csv")
 
 final_df = pd.concat([believer_df, denier_df, neutral_df])
 
-with open("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/us-states.json", 'r') as f:
+with open("./main/sources/us-states.json", 'r') as f:
     geojson_file = json.load(f)
 
-# ******************************** Data cleaning ****************************** #
+# ******************************** Data cleaning ***************************** #
 
 df = add_state_column(final_df)
 
-# ------------------------- App Layout ------------------------------- #
+# --------------------------------- App Layout ------------------------------- #
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MINTY])
-
-L_FONT = "Work Sans, sans-serif"
-LT_SIZE = 16
-L_SIZE = 12
 
 app.layout = dbc.Container([
     dbc.Row(
         dbc.Col(
             [
-                html.H1("Sentiment of US states", style = {'textAlign': 'center'}),
+                html.H1("Hot or Not: An Enquiry into Climate Change Perceptions", style = {'textAlign': 'center', "padding-top": "70px"}),
                 html.P(
                     "Welcome to our climate sentiment analysis dashboard! Our project is dedicated"
                     " to analyzing the sentiment towards climate change across the United States."
@@ -55,7 +53,7 @@ app.layout = dbc.Container([
                     " towards climate change based on the stance of the user (Believer, Denier or Neutral." 
                     " Explore our dashboard to gain insights into how people feel about this critical issue"
                     " in different regions of the country.",
-                    style={"font-size": 16, "text-align": 'left', 'marginTop': 15}
+                    style={"font-size": 16, "text-align": 'left', 'marginTop': 15},
                 ),
             ]
         )
@@ -92,7 +90,7 @@ app.layout = dbc.Container([
                     )
                 ],
                 width={"size": 4},
-                className="my-3",
+                className="my-3", align = "center"
             ),
             dbc.Col(
                 [
@@ -115,6 +113,12 @@ app.layout = dbc.Container([
         dbc.Col([
             html.Div([
                 html.H3("Word Clouds by Stance"),
+                html.P("""
+                The word cloud provides a visual representation of the most salient "
+                "and frequently used terms related to climate change on Twitter over time. " 
+                "This can be a useful tool for understanding public discourse around climate "
+                "change and identifying trends and shifts in language and rhetoric."
+                """),
 
                 dcc.Dropdown(
                     options=[
@@ -124,13 +128,8 @@ app.layout = dbc.Container([
                     ],
                     value='Words',
                     id='wordcloud-dropdown',
-                    style={'width': '100%'}
+                    style={'width': '40%'}
                 ),
-                html.P("""
-                The word cloud provides a visual representation of the most salient and frequently used terms related to climate change on Twitter over time. 
-                This can be a useful tool for understanding public discourse around climate change and identifying trends and shifts in language and rhetoric. 
-                """)
-
             ]),
 
         ], width=12),
@@ -153,12 +152,47 @@ app.layout = dbc.Container([
             )
         ], width=6),
     ]),
+    dbc.Row([
+        dbc.Col([
+            html.Div([
+                html.H3("Comparison Of Tweets Sentiment in Relation to Disaster Event Declaration"),
+                html.P(
+                "The word cloud provides a visual representation of the most salient "
+                "and frequently used terms related to climate change on Twitter over time. " 
+                "This can be a useful tool for understanding public discourse around climate "
+                "change and identifying trends and shifts in language and rhetoric."
+                ),
+                dcc.Dropdown(
+                    options=[
+                        {'label': 'Before', 'value': 'before'},
+                        {'label': 'After', 'value': 'after'},
+                        {'label': 'Before and After', 'value': 'before and after'}
+                    ],
+                    value='Words',
+                    id='disaster-dropdown',
+                    style={'width': '40%'}
+                ),
+            ]),
+
+        ], width=12),
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.Img(
+                style={'width': '75%', 'display': 'inline-block'},
+                id = "disaster_sentiment",
+                title = "Scatter Plot for Disaster Event Declaration"
+            )
+        ], width=10, align = "center"),
+    ]),
+
     dbc.Row(
         dbc.Col(
             [
                 html.P(
-                    "This project was developed by Jonathan Juarez, Jaskirat Kaur, Ridhi Purohit, and Grey Xu"
-                    "as part of the Spring 2023 course 'CAPP 30122: Computer Science and Applications II' at the University of Chicago",
+                    "This project was developed by Jonathan Juarez, Jaskirat Kaur, "
+                    "Ridhi Purohit, and Grey Xu as part of the Spring 2023 course "
+                    "'CAPP 30122: Computer Science and Applications II' at the University of Chicago",
                     className="text-muted",
                 ),
             ],
@@ -169,7 +203,7 @@ app.layout = dbc.Container([
 ], fluid=True)
 
 # ********************************** App callbacks *****************************
-# Callback and function for displaying the map
+# Callback for displaying the map
 @app.callback(
     Output('map-graph', 'figure'),
     [Input('stance_dropdown', 'value'),
@@ -202,11 +236,11 @@ def display_wordclouds_2009(stance):
     
     """
     if stance == "believer":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_believer_2009.png"
+        image_path = "./main/images/wordcloud_believer_2009.png"
     elif stance == "denier":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_denier_2009.png"
+        image_path = "./main/images/wordcloud_denier_2009.png"
     else:
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_neutral_2009.png"
+        image_path = "./main/images/wordcloud_neutral_2009.png"
        
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
@@ -223,15 +257,41 @@ def display_wordclouds_2019(stance):
     
     """
     if stance == "believer":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_believer_2019.png"
+        image_path = "./main/images/wordcloud_believer_2018.png"
     elif stance == "denier":
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_denier_2019.png"
+        image_path = "./main/images/wordcloud_denier_2018.png"
     else:
-        image_path = "30122-project-hot-or-not/main/images/wordcloud_neutral_2019.png"
+        image_path = "./main/images/wordcloud_neutral_2018.png"
+
+    encoded_image = base64.b64encode(open(image_path, 'rb').read())
+
+    return 'data:image/png;base64,{}'.format(encoded_image.decode())
+
+@app.callback(
+    Output(component_id = "disaster_sentiment", component_property = "src"),
+    Input(component_id = "disaster-dropdown", component_property = "value")
+)
+def display_disaster_scatterplot(timeline):
+    """
+    
+    This function displays the average sentiment of people before and after a
+    disaster event
+    
+    Inputs: "before", "after" or "before and after"
+    
+    Returns: Image
+    
+    """
+    if timeline == "after":
+        image_path = "./main/images/Average Sentiment of Tweets After a Disaster Declaration.png"
+    elif timeline == "before":
+        image_path = "./main/images/Average Sentiment of Tweets Before a Disaster Declaration.png"
+    else:
+        image_path = "./main/images/Average Sentiments Before & After a Disaster Declaration.png"
 
     encoded_image = base64.b64encode(open(image_path, 'rb').read())
 
     return 'data:image/png;base64,{}'.format(encoded_image.decode())
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=2505)
