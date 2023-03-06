@@ -8,6 +8,7 @@ Main file for building the dashboard.
 
 Run the app with `python3 app.py` and visit
 http://127.0.0.1:8050/ in your web browser.
+(takes about a minute to run)
 
 '''
 
@@ -19,7 +20,6 @@ import plotly.express as px
 import pandas as pd
 import base64
 from dash.dependencies import Input, Output
-import plotly.graph_objects as go
 from .data4dash import add_state_column
 import dash_bootstrap_components as dbc
 
@@ -31,7 +31,7 @@ neutral_df = pd.read_csv("./main/sources/neutral_twitter.csv")
 
 final_df = pd.concat([believer_df, denier_df, neutral_df])
 
-with open("/home/jaskiratk/capp30122/30122-project-hot-or-not/main/sources/us-states.json", 'r') as f:
+with open("./main/sources/us-states.json", 'r') as f:
     geojson_file = json.load(f)
 
 # ******************************** Data cleaning ***************************** #
@@ -128,7 +128,7 @@ app.layout = dbc.Container([
                     ],
                     value='Words',
                     id='wordcloud-dropdown',
-                    style={'width': '100%'}
+                    style={'width': '40%'}
                 ),
             ]),
 
@@ -170,7 +170,7 @@ app.layout = dbc.Container([
                     ],
                     value='Words',
                     id='disaster-dropdown',
-                    style={'width': '100%'}
+                    style={'width': '40%'}
                 ),
             ]),
 
@@ -271,16 +271,20 @@ def display_wordclouds_2019(stance):
     Output(component_id = "disaster_sentiment", component_property = "src"),
     Input(component_id = "disaster-dropdown", component_property = "value")
 )
-def display_wordclouds_2019(stance):
+def display_disaster_scatterplot(timeline):
     """
     
     This function displays the average sentiment of people before and after a
     disaster event
     
+    Inputs: "before", "after" or "before and after"
+    
+    Returns: Image
+    
     """
-    if stance == "after":
+    if timeline == "after":
         image_path = "./main/images/Average Sentiment of Tweets After a Disaster Declaration.png"
-    elif stance == "before":
+    elif timeline == "before":
         image_path = "./main/images/Average Sentiment of Tweets Before a Disaster Declaration.png"
     else:
         image_path = "./main/images/Average Sentiments Before & After a Disaster Declaration.png"
@@ -290,4 +294,4 @@ def display_wordclouds_2019(stance):
     return 'data:image/png;base64,{}'.format(encoded_image.decode())
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=2505)
