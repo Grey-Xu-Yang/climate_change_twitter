@@ -17,8 +17,6 @@ def add_state_column(df):
     Given a column of State FIPs, this function adds another column 
     for the state name corresponding to the FIP
     
-    Jaskirat
-    
     """
     fip_to_state = {
     '01': 'Alabama','02': 'Alaska','04': 'Arizona','05': 'Arkansas','06': 'California',
@@ -37,6 +35,7 @@ def add_state_column(df):
     df['state_name'] = df['state_FIP'].map(fip_to_state)
     
     return df
+<<<<<<< HEAD:main/src/utils.py
 
 def extract_year_month(dataframe):
     cols = ['declarationTitle', 'declarationDate', 'Avg_Sentiment_Before', 'Avg_Sentiment_After']
@@ -45,3 +44,5 @@ def extract_year_month(dataframe):
     df['Year_Month'] = df['declarationDate'].apply(lambda x: x[:7])
     
     return df
+=======
+>>>>>>> 362f88540555e7ac2ed65be9930c6029ae5b8d89:main/src/data4dash.py
