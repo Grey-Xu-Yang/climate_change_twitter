@@ -1,7 +1,9 @@
 #source https://towardsdatascience.com/very-simple-python-script-for-extracting-most-common-words-from-a-story-1e3570d0b9d0
 
-#Code provided by Jonathan Juarez
-
+"""
+Text cleaning file
+Jonathan Juarez
+"""
 import numpy as np
 import re
 
