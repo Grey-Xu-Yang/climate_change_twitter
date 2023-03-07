@@ -167,13 +167,7 @@ stance_data_generator("neutral")
 ## Use to generate the word cloud, tweets_text_content.csv is created from pulling the data using twarc
 tweets_text = pd.read_csv("./main/sources/tweets_text_content.csv")
 tweets_text['content'] = tweets_text.apply(lambda x: (x['text'] if type(x['text']) == str else '') +
-                        (x['Unnamed: 2'] if type(x['Unnamed: 2']) == str else '') + (x['Unnamed: 3'] if type(x['Unnamed: 3']) == str else '') +
-                        (x['Unnamed: 4'] if type(x['Unnamed: 4']) == str else '') + (x['Unnamed: 5'] if type(x['Unnamed: 5']) == str else '') +
-                        (x['Unnamed: 6'] if type(x['Unnamed: 6']) == str else '') + (x['Unnamed: 7'] if type(x['Unnamed: 7']) == str else '') +
-                        (x['Unnamed: 8'] if type(x['Unnamed: 8']) == str else '') + (x['Unnamed: 9'] if type(x['Unnamed: 9']) == str else '') +
-                        (x['Unnamed: 10'] if type(x['Unnamed: 10']) == str else '') + (x['Unnamed: 11'] if type(x['Unnamed: 12']) == str else '') +
-                        (x['Unnamed: 12'] if type(x['Unnamed: 12']) == str else '') + (x['Unnamed: 13'] if type(x['Unnamed: 13']) == str else '') +
-                        (x['Unnamed: 14'] if type(x['Unnamed: 14']) == str else ''), axis=1)
+                        (x['Unnamed: 2'] if type(x['Unnamed: 2']) == str else '') + (x['Unnamed: 3'] if type(x['Unnamed: 3']) == str else ''), axis=1)
 
 tweets_text['id'] = tweets_text['id'].astype(str).str.slice(stop=-1)
 tweets_text_final = tweets_text.loc[:,["id","content"]].drop_duplicates()
