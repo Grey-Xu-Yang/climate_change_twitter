@@ -2,7 +2,7 @@
 '''
 Dashboard
 
-JASKIRAT KAUR: add_state_column
+JASKIRAT KAUR: add_state_column, clean_county_data
 RIDHI PUROHIT: extract_year_month
 
 File for subsisiary functions for dash
@@ -54,6 +54,20 @@ def extract_year_month(dataframe):
     df_plt = dataframe.loc[:, cols]
     df = df_plt.sort_values(by="declarationDate", ascending=True)
     df['Year_Month'] = df['declarationDate'].apply(lambda x: x[:7])
+    
+    return df
+
+def clean_county_data(filename):
+    """
+    Cleans smaller sized county data aggregated by county and year 
+    
+    Input: csv file path
+    Returns: cleaned pandas dataframe
+    """
+    
+    df = pd.read_csv(filename)
+    df = df[(df["year"] != 2006) & (df["year"] != 2007) & (df["year"] != 2008)]
+    df["state_name"] = df["state_name"].fillna('District of Columbia')
     
     return df
 

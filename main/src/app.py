@@ -20,16 +20,17 @@ import plotly.express as px
 import pandas as pd
 import base64
 from dash.dependencies import Input, Output
-from .utils import add_state_column, extract_year_month
+from .utils import add_state_column, extract_year_month, clean_county_data
 import dash_bootstrap_components as dbc
 
 
-# ******************* Data cleaning for sentiment map ******************* #
+# ------------------ Data cleaning for sentiment map -------------------------- #
+
 # Obtained stance dataframes using the stance_data_generator function 
 # in clean_data.py in the "cleaning" directory and generated smaller 
 # sized filtered datasets you can access in the "sources" directory. Due to
 # size constraints, we called the function in a jupyter notebook linked to 
-# google drive with the original 2 GB data and added processed csv files on git.
+# google drive with the original 2 GB data and added processed csv files to git.
 
 believer_df = pd.read_csv("./main/sources/believer_twitter.csv")
 denier_df = pd.read_csv("./main/sources/denier_twitter.csv")
@@ -43,8 +44,17 @@ with open("./main/sources/us-states.json", 'r') as f:
 # Adding state column based on state FIP
 df = add_state_column(final_df)
 
+# --------------------- County data and dropdown ----------------------------- #
 
-# ****************** Data cleaning for disaster scatter plot ***************** #
+df3 = clean_county_data("./main/sources/twitter_year_county.csv")
+
+states = df3['state_name'].unique()
+dropdown_options = [
+    {'label': state, 'value': state}
+    for state in states
+]
+
+# ----------------- Data cleaning for disaster scatter plot ------------------ #
 
 df_disaster = pd.read_csv('./main/sources/average_sentiments_data.csv')
 
@@ -130,6 +140,25 @@ app.layout = dbc.Container([
     ),
     dbc.Row([
         dbc.Col([
+            html.H3("Sentiment by County across Years")
+        ])
+    ]),
+    dbc.Row([
+        dbc.Col([
+            dcc.Dropdown(
+                id='state-dropdown',
+                options=dropdown_options,
+                value=states[0]
+            )
+        ], width=3)
+    ]),
+    dbc.Row([
+        dbc.Col([
+            dcc.Graph(id="line-plot")
+        ])
+    ]),
+    dbc.Row([
+        dbc.Col([
             html.Div([
                 html.H3("Word Clouds by Stance"),
                 html.P(
@@ -212,7 +241,8 @@ app.layout = dbc.Container([
     ),
 ], fluid=True)
 
-# ********************************** App callbacks ***************************** #
+# --------------------------------- App callbacks ----------------------------- #
+
 # Callback for displaying the map
 @app.callback(
     Output('map-graph', 'figure'),
@@ -234,6 +264,18 @@ def update_map(stance, year):
                                   color_continuous_scale='rdylgn', range_color=(-0.3, 0.3))
     return fig
 
+# County deep dive
+
+@app.callback(
+    Output('line-plot', 'figure'),
+    [Input('state-dropdown', 'value')]
+)
+def update_figure(selected_state):
+    filtered_df = df3[df3['state_name'] == selected_state]
+    fig = px.line(filtered_df, x="year", y="sentiment", color="county_name",
+                  hover_data={"year": "|%Y"},
+                  title=f"Sentiment by County in {selected_state}")
+    return fig
 
 # Juxtaposing word clouds from year 2009 and 2019
 @app.callback(
@@ -278,4 +320,4 @@ def display_wordclouds_2019(stance):
     return 'data:image/png;base64,{}'.format(encoded_image.decode())
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=2505)
+    app.run_server(debug=True, port=8080)
