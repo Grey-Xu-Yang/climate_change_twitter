@@ -41,10 +41,6 @@ https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sha
 │   ├── file1.txt
 │   ├── file2.py
 │   └── file3.ipynb
-├── folder1
-│   ├── file1.txt
-│   ├── file2.py
-│   └── file3.ipynb
 ├── folder2
 │   ├── file4.txt
 │   └── folder3
