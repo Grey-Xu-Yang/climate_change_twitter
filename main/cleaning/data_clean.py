@@ -119,6 +119,7 @@ filtered_df = merged_df[(merged_df['date'] >= merged_df['incidentBeginDate']) & 
 # Take 3 minute to run this line
 # Group data by date and county
 grouped_df2 = US_twitter.groupby(['date', 'state_FIP'])
+grouped_df2_year = US_twitter.groupby(['year', 'state_FIP'])
 
 # Define the aggregation functions for categorical and numerical variables
 # For categorical value, take the most frequently occured type, for the numerical value, take the average
@@ -133,8 +134,14 @@ agg_dict2 = {'topic': lambda x: x.value_counts().index[0],
 
 # Apply the aggregation
 result_df2 = grouped_df2.agg(agg_dict2)
+result_df2_year = grouped_df2_year.agg(agg_dict2)
 # Reset the index
 result_df2 = result_df2.reset_index()
+result_df2_year = result_df2_year.reset_index()
+result_df2_year = result_df2_year.iloc[:,:-1]
+
+file_path = './main/sources/twitter_year_state.csv'
+result_df2_year.to_csv(file_path, index=False) 
 
 # If the twitter release date falls into the range of starting date and ending date of the event,
 # and we don't consider whether the twitter has the same county ID with the FEMA data 
