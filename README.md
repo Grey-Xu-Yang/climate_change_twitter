@@ -28,6 +28,7 @@ To get started with the Dashboard Visulization, follow these steps:
 
 To check out EDA and data analysis:
 1. To view the EDA notebook, click [here](https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not/blob/main/main/analysis/EDA.ipynb).
+2. To view the analysis notebook, click [here](https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not/blob/main/main/analysis/analysis.ipynb).
 
 PS:
 Due to the constraint of file size, to access the large dataset when running data_clean.py, click the following google drive to download the twitter dataset:
