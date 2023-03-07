@@ -19,12 +19,15 @@ Even though the more extreme weather events have been happening more frequently 
 3. Twitter Developer Platform (API): https://developer.twitter.com/en/portal/dashboard
 
 ## Getting Started
-To get started with the App, follow these steps:
+To get started with the Dashboard Visulization, follow these steps:
 
 1. Clone the repository: git clone https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not.git
 2. Run  *poetry install* to install the necessary packages
 3. Run  *poetry shell* to activate the virtual environment
 4. Run  *python -m main* to open the dashboard
+
+To check out EDA and data analysis:
+1. To view the EDA notebook, click [here](https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not/blob/main/main/analysis/EDA.ipynb).
 
 PS:
 Due to the constraint of file size, to access the large dataset when running data_clean.py, click the following google drive to download the twitter dataset:
