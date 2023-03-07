@@ -98,6 +98,8 @@ agg_dict = {'topic': lambda x: x.value_counts().index[0],
             'temperature_avg': 'mean',
             'sentiment': 'mean',
             'id': lambda x: list(x)}
+           # If needs a string instead of list, replace with below:
+           #'id': lambda x: ','.join(map(str, x))
 
 # Apply the aggregation
 result_df = grouped_df.agg(agg_dict)
