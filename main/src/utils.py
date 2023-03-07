@@ -2,7 +2,8 @@
 '''
 Dashboard
 
-JASKIRAT KAUR
+JASKIRAT KAUR: add_state_column
+RIDHI PUROHIT: extract_year_month
 
 File for subsisiary functions for dash
 
@@ -15,7 +16,10 @@ import pandas as pd
 def add_state_column(df):
     """
     Given a column of State FIPs, this function adds another column 
-    for the state name corresponding to the FIP
+    for the state name corresponding to the FIP 
+    
+    Input: a pandas dataframe
+    Output: Dataframe with the state_name column
     
     """
     fip_to_state = {
@@ -37,6 +41,15 @@ def add_state_column(df):
     return df
 
 def extract_year_month(dataframe):
+    """
+    This function extraacts the year and month from the declarationDate 
+    for plotting average sentiment before and after a disaster event
+    
+    Input: dataframe
+    Returns: cleaned dataframe
+    
+    """
+    
     cols = ['declarationTitle', 'declarationDate', 'Avg_Sentiment_Before', 'Avg_Sentiment_After']
     df_plt = dataframe.loc[:, cols]
     df = df_plt.sort_values(by="declarationDate", ascending=True)
