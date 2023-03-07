@@ -35,6 +35,22 @@ Due to the constraint of file size, to access the large dataset when running dat
 https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sharing
 . Move the generated file called "twitter.csv" into the subdirectory called "sources". You would be able to run the data_clean.py.
 
+## File Structure Tree
+.
+├── folder1
+│   ├── file1.txt
+│   ├── file2.py
+│   └── file3.ipynb
+├── folder1
+│   ├── file1.txt
+│   ├── file2.py
+│   └── file3.ipynb
+├── folder2
+│   ├── file4.txt
+│   └── folder3
+│       └── file5.py
+└── README.md
+
 ## Analysis Map Road
 Firstly, we will visualize the average sentiment across the United States from 2009 to 2019 using the Twitter collections dataset. This analysis will help us understand how people's sentiment towards climate change has evolved over time in different parts of the country. 
 
