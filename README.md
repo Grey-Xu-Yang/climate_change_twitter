@@ -37,7 +37,11 @@ https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sha
 
 ## Directory Map
 - main
--- File
+  - analysis
+    - analysis.ipynb
+    - EDA.ipynb
+  - Level 2
+
 
 
 ## Analysis 
