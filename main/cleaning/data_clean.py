@@ -33,17 +33,13 @@ file_path = './main/sources/US_twitter.csv'
 US_twitter.to_csv(file_path, index=False) 
 
 # Load data into a Pandas DataFrame
-<<<<<<< HEAD
-file_path = "./main/sources/county_shape/cb_2018_us_county_500k.shp"
-=======
-file_path = "./main/sources/county/cb_2018_us_county_500k.shp"
->>>>>>> 06b37e5e0d9291f955648d4ec73510df3aeb4bde
+geofile_path = "./main/sources/county/cb_2018_us_county_500k.shp"
 # Convert latitude and longitude values to Point objects
 geometry = [Point(xy) for xy in zip(US_twitter['lng'], US_twitter['lat'])]
 # Create a GeoDataFrame from the DataFrame and Point objects
 gdf = gpd.GeoDataFrame(US_twitter, geometry=geometry)
 # Load a shapefile of the United States that contains state and county boundaries
-us_map = gpd.read_file(file_path)
+us_map = gpd.read_file(geofile_path)
 # Perform spatial join to match the latitude and longitude values to state and county boundaries
 result = gpd.sjoin(gdf, us_map, how='left', op='within')
 # Extract state and county names from the joined DataFrame and add them to the original DataFrame
