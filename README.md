@@ -19,7 +19,7 @@ Even though the more extreme weather events have been happening more frequently 
 3. Twitter Developer Platform (API): https://developer.twitter.com/en/portal/dashboard
 
 ## Getting Started
-To get started with the Dashboard Visulization, follow these steps:
+To get started with the Dashboard, follow these steps:
 
 1. Clone the repository: git clone https://github.com/uchicago-capp122-spring23/30122-project-hot-or-not.git
 2. Run  *poetry install* to install the necessary packages
