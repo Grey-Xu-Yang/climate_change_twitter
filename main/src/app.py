@@ -24,7 +24,13 @@ from .utils import add_state_column, extract_year_month
 import dash_bootstrap_components as dbc
 
 
-# load dataframes for the three stances
+# ******************* Data cleaning for sentiment map ******************* #
+# Obtained stance dataframes using the stance_data_generator function 
+# in clean_data.py in the "cleaning" directory and generated smaller 
+# sized filtered datasets you can access in the "sources" directory. Due to
+# size constraints, we called the function in a jupyter notebook linked to 
+# google drive with the original 2 GB data and added processed csv files on git.
+
 believer_df = pd.read_csv("./main/sources/believer_twitter.csv")
 denier_df = pd.read_csv("./main/sources/denier_twitter.csv")
 neutral_df = pd.read_csv("./main/sources/neutral_twitter.csv")
@@ -37,13 +43,13 @@ with open("./main/sources/us-states.json", 'r') as f:
 # Adding state column based on state FIP
 df = add_state_column(final_df)
 
+
 # ****************** Data cleaning for disaster scatter plot ***************** #
 
 df_disaster = pd.read_csv('./main/sources/average_sentiments_data.csv')
 
 # Converting date into year and month
 df2 = extract_year_month(df_disaster)
-
 
 
 # --------------------------------- App Layout ------------------------------- #
@@ -95,7 +101,10 @@ app.layout = dbc.Container([
                     html.P(
                         "The map displays the average sentiment score for each state. "            
                         "Use the slider below to select a year and see the average sentiment towards "            
-                        "climate change by state for the chosen stance.",
+                        "climate change by state for the chosen stance. The sentiment score is on a continuous scale. " 
+                        "This scale ranges from -1 to 1 with values closer to 1 being translated to positive sentiment, " 
+                        "values closer to -1 representing a negative sentiment while values close to 0 " 
+                        "depicting no sentiment or being neutral.",
                         style={"font-size": 16, "text-align": 'left', 'marginTop': 15}
                     )
                 ],
@@ -203,7 +212,7 @@ app.layout = dbc.Container([
     ),
 ], fluid=True)
 
-# ********************************** App callbacks *****************************
+# ********************************** App callbacks ***************************** #
 # Callback for displaying the map
 @app.callback(
     Output('map-graph', 'figure'),
