@@ -18,7 +18,6 @@ import us.states
 import geopandas as gpd
 from shapely.geometry import Point
 
-
 ### Part 1. Twitter Dataset Clean 
 twitter = pd.read_csv("./main/sources/twitter.csv")
 # You need to find this file in the google drive link provided in the readme. 
