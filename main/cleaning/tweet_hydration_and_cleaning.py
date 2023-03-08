@@ -11,7 +11,7 @@ def extract_tweet_ids():
     Output: Creates a "tweet_ids_random.txt" file with randomized tweet ids extracted from the 
     US_twitter_analysis_county.csv
     '''
-    filename1 = pathlib.Path(__file__).parent.parent / "sources" / "US_twitter_analysis_county.csv"
+    filename1 = pathlib.Path(__file__).parent.parent / "sources" / "merged_date_county.csv"
 
     df1 = pd.read_csv(filename1)
     
