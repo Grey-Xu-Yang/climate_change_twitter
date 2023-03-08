@@ -35,7 +35,7 @@ To check out EDA and data analysis:
 PS:
 Due to the constraint of file size, to access the large dataset when running data_clean.py, click the following google drive to download the twitter dataset:
 https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sharing
-. Move the generated file called "twitter.csv" into the subdirectory called "sources". You would be able to run the data_clean.py in the "cleaning" directory. Simiarly, to operate the "tweet_hydration_and_cleaning.py", you also need to download the "hydrated_tweets.json" and move to the corresponding directory.
+. Move the generated file called "twitter.csv" into the subdirectory called "sources". You would be able to run the “data_clean.py” in the "cleaning" directory. Simiarly, to operate the "tweet_hydration_and_cleaning.py", you also need to download the "hydrated_tweets.json" and move to the corresponding directory.
 
 ## Directory on important files
 - main
