@@ -57,9 +57,9 @@ https://drive.google.com/drive/folders/1PU5ILt9Db1qrmUOgH_0lbAzGOOQovBca?usp=sha
     - utils.py  
    
 ## Demo on Visualization
-### Word Cloud
+### Average Sentiments Before & After a Disaster Declaration
 <p align="center">
-<img src="/main/images/wordcloud_Fire_2019.png">
+<img src="/main/images/Average Sentiments Before & After a Disaster Declaration.png">
 </p>
 
 ### Interactive Sentiment Map
